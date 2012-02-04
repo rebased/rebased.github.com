@@ -1,0 +1,212 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background: url(/img/background.png);
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+h1 {
+  font-size: 58px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background: #5c5863;
+  z-index: 100;
+}
+
+header nav ul {
+  clear: left;
+  float: left;
+  list-style: none;
+  margin: 0;
+  margin-top: 7px;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  text-align: center;
+}
+
+header nav ul li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 50%;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 3px 10px;
+}
+
+header nav ul li a.link-active {
+  background: #00a2e3;
+  border-radius: 15px;
+  behavior: url(/css/PIE.htc);
+}
+
+article {
+  width: 820px;
+  margin: 0 auto;
+}
+
+article section {
+  position: relative;
+  overflow: auto;
+  padding: 140px 30px 100px;
+}
+
+article section:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10px;
+  background: url(/img/separator.png) 50% 50% no-repeat;
+}
+
+article section#branding {
+  text-align: center;
+}
+
+article section#branding img {
+  width: 150px;
+}
+
+article section#about p {
+  font-size: 16px;
+}
+
+article section#team ul {
+  list-style: none;
+  padding: 0;
+}
+
+article section#team ul li {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+article section#team .social {
+  width: 80px;
+}
+
+article section#team .social a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  float: right;
+  margin: 5px 10px 5px 0;
+}
+
+article section#team .social a.twitter {
+  background: url(/img/twitter.png);
+}
+
+article section#team .social a.github {
+  background: url(/img/github.png);
+}
+
+article section#team p {
+  position: absolute;
+  left: 90px;
+  margin: 0;
+}
+
+article section#team .name {
+  top: 3px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+article section#team .description {
+  top: 30px;
+  font-size: 14px;
+}
+
+article section#clients img {
+  height: 60px;
+  float: left;
+  margin-right: 10px;
+}
+
+article section#contact #contact_data {
+  float: left;
+  width: 390px;
+  margin-right: 40px;
+}
+
+article section#contact #contact_data iframe {
+  border: 5px solid #b5b5b5;
+}
+
+article section#contact #contact_data address {
+  font-size: 14px;
+  font-style: normal;
+  margin-top: 20px;
+  line-height: 130%;
+}
+
+article section#contact #contact_data address .name {
+  font-weight: bold;
+}
+
+article section#contact form {
+  float: left;
+  width: 330px;
+}
+
+article section#contact form label, article section#contact form input, article section#contact form textarea {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  behavior: url(/css/PIE.htc);
+}
+
+article section#contact form label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+article section#contact form input {
+  height: 36px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border: 1px inset;
+}
+
+article section#contact form textarea {
+  height: 145px;
+  font-size: 20px;
+  max-width: 100%;
+  border: 1px inset;
+}
+
+article section#contact form input[type=submit] {
+  width: 81px;
+  height: 33px;
+  text-transform: uppercase;
+  margin-top: 25px;
+  background: #00719d;
+  color: white;
+  float: right;
+  border-radius: 15px;
+  behavior: url(/css/PIE.htc);
+}
