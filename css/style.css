@@ -145,6 +145,11 @@ article section#clients img {
   height: 60px;
   float: left;
   margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+article section#clients .description {
+  clear: both;
 }
 
 article section#contact #contact_data {
