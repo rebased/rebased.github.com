@@ -1,0 +1,2 @@
+echo 'Pushing...'
+rsync -avz --delete --exclude=deploy * tomash@rebased.pl:/u/apps/rebased.pl/
