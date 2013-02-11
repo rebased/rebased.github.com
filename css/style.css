@@ -1,76 +1,56 @@
-body {
-  padding: 0px;
-  margin: 0px;
-  background: url(/img/background.png);
-  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-  font-weight: 400;
-  font-stretch: normal;
+@media (min-width: 980px) {
+  body {
+    padding-top: 60px;
+  }
 }
 
-h1 {
-  font-size: 58px;
+body {
+  background: url(/img/background.png);
 }
 
 h2 {
   font-size: 30px;
-}
-
-header nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  background: #5c5863;
-  z-index: 100;
-}
-
-header nav ul {
-  clear: left;
-  float: left;
-  list-style: none;
-  margin: 0;
-  margin-top: 7px;
-  padding: 0;
-  position: relative;
-  left: 50%;
+  margin: 1em 0;
   text-align: center;
 }
 
-header nav ul li {
-  display: block;
-  float: left;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  right: 50%;
+.navbar .nav,
+.navbar .nav > li {
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 3px 10px;
+.navbar .nav > li:first-of-type {
+  display: none;
 }
 
-header nav ul li a.link-active {
-  background: #00a2e3;
-  border-radius: 15px;
-  behavior: url(/css/PIE.htc);
+.navbar {
+  box-shadow: 0 0 10px #5c5863;
 }
 
-article {
-  width: 820px;
-  margin: 0 auto;
+.navbar-inner {
+  text-align:center;
+  border: 0;
 }
 
-article section {
+p {
+  text-align: justify;
+}
+
+section {
   position: relative;
   overflow: auto;
-  padding: 140px 30px 100px;
+  padding: 140px 30px;
 }
 
-article section:before {
+section:first-of-type {
+  padding: 100px 0 140px;
+}
+
+section::before {
   content: "";
   position: absolute;
   left: 0;
@@ -80,34 +60,49 @@ article section:before {
   background: url(/img/separator.png) 50% 50% no-repeat;
 }
 
-article section#branding {
+section:first-of-type::before {
+  display: none;
+}
+
+#branding {
   text-align: center;
 }
 
-article section#branding img {
-  width: 150px;
+#branding img {
+  margin-bottom: 60px;
 }
 
-article section#about p {
-  font-size: 16px;
+#branding h1 {
+  font-size: 54px;
 }
 
-article section#team ul {
+#team ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-article section#team ul li {
+#team ul li {
   position: relative;
   overflow: hidden;
-  margin-top: 20px;
 }
 
-article section#team .social {
+#team img {
+  float: left;
   width: 80px;
+  height: 80px;
+  margin-right: 10px;
 }
 
-article section#team .social a {
+#team .social {
+  float: left;
+  clear: both;
+  width: 80px;
+  margin-right: 10px;
+  padding-bottom: 20px;
+}
+
+#team .social a {
   display: block;
   width: 25px;
   height: 25px;
@@ -116,72 +111,100 @@ article section#team .social a {
   margin: 5px 10px 5px 0;
 }
 
-article section#team .social a.twitter {
+#team .social a.twitter {
   background: url(/img/twitter.png);
 }
 
-article section#team .social a.github {
+#team .social a.github {
   background: url(/img/github.png);
 }
 
-article section#team p {
-  position: absolute;
-  left: 90px;
+#team p {
   margin: 0;
 }
 
-article section#team .name {
-  top: 3px;
+#team .name {
   font-size: 18px;
   font-weight: bold;
 }
 
-article section#team .description {
-  top: 30px;
+#team .description {
   font-size: 14px;
 }
 
-article section#clients {
-  display: none; /* hidden for now */
+#contact #map {
+  display: block;
+  margin-bottom: 30px;
 }
 
-article section#clients ul {
-  margin: 20px -10px;
-  padding: 0;
-  overflow: auto;
-  list-style: none;
+#contact #map iframe {
+  width: 100% !important;
 }
 
-article section#clients ul li {
-  float: left;
-  margin: 5px 10px;
+#contact address {
+  display: block;
+  text-align: center;
 }
 
-article section#clients img {
-  height: 60px;
+@media (max-width: 767px) {
+  section {
+    padding: 60px 0px;
+  }
+
+  section:first-of-type {
+    padding: 20px 0 60px;
+  }
+
+  #team li {
+    padding-top: 180px;
+    padding-bottom: 20px;
+  }
+
+  #team img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -80px;
+    width: 160px;
+    height: 160px;
+  }
+
+  #team .social {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: 130px;
+    width: 40px;
+  }
+
+  #team .social a {
+    zoom: 2;
+    border-radius: 50%;
+  }
+
+  #team .name {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  #team .description {
+    text-align: justify;
+  }
 }
 
-article section#clients .description {
-  clear: both;
-}
+@media (max-width: 380px) {
+  #branding h1 {
+    font-size: 40px;
+  }
 
-article section#contact #contact_data {
-  float: left;
-  width: 390px;
-  margin-right: 40px;
-}
+  #team li {
+    padding-top: 250px;
+  }
 
-article section#contact #contact_data iframe {
-  border: 5px solid #b5b5b5;
-}
-
-article section#contact #contact_data address {
-  font-size: 14px;
-  font-style: normal;
-  margin-top: 20px;
-  line-height: 130%;
-}
-
-article section#contact #contact_data address .name {
-  font-weight: bold;
+  #team .social {
+    top: 170px;
+    margin-left: -80px;
+    width: 160px;
+  }
 }
