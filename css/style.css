@@ -43,7 +43,7 @@ p {
 section {
   position: relative;
   overflow: auto;
-  padding: 140px 30px;
+  padding: 50px 30px;
 }
 
 section:first-of-type {
