@@ -1,0 +1,61 @@
+section#contact > img {
+  position: relative;
+  width: 146px;
+  height: 112px;
+  top: 38px;
+  left: -162px;
+  float: right;
+}
+
+#contact figure > img {
+  width: 518px;
+  height: 412px;
+  position: relative;
+  float: left;
+}
+
+section#contact figcaption {
+  position: relative;
+}
+
+#contact figcaption > section:first-of-type {
+  position: absolute;
+  width: 180px;
+  height: 184px;
+  top: 222px;
+  left: 632px;
+  display: inline-block;
+}
+
+#contact figcaption > section:last-of-type {
+  position: absolute;
+  width: 180px;
+  height: 184px;
+  top: 222px;
+  left: 898px;
+  display: inline-block;
+}
+
+#contact figcaption address {
+  font-size: 12px;
+  font-style: normal;
+  line-height: 140%;
+  margin-bottom: 34px;
+}
+
+#contact figcaption section:first-of-type > header {
+  margin-bottom: 24px;
+}
+
+#contact figcaption section:last-of-type > header {
+  margin-bottom: 60px;
+}
+
+#contact figcaption section:first-of-type > address {
+  margin-top: 20px;
+}
+
+#title {
+  font-weight: bold;
+  font-size: 14px;
+}
