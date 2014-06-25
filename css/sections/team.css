@@ -1,0 +1,115 @@
+#team figure {
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+}
+
+#team figure:hover figcaption {
+  background: rgba(28, 77, 196, 0.5);
+}
+
+#team figure:hover img, #team figure:hover header, #team figure:hover p {
+  -webkit-transition: all .2s;
+  -webkit-transition-delay: .1s;
+}
+
+#team figure:hover img {
+  top: 0;
+  opacity: 1;
+}
+
+#team figure:hover header {
+  margin-top: 138px;
+  top: 0;
+}
+
+#team figure:hover p {
+  bottom: 0;
+  overflow: visible;
+  opacity: 1;
+}
+
+#team figure > img {
+  width: 306px;
+  height: 306px;
+  background-color: gray;
+}
+
+#team figure > figcaption {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  color: white;
+  text-align: center;
+  -webkit-transition: all .1s ease-in;
+  overflow: hidden;
+}
+
+#team figcaption > header {
+  margin-top: 244px;
+  margin-bottom: -156px;
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+  overflow: visible;
+  opacity: 1;
+}
+
+#team figcaption header p {
+  font-size: 14px;
+  line-height: 160%;
+  opacity: 0;
+}
+
+#team figcaption > p {
+  height: 100px;
+  font-size: 12px;
+  position: relative;
+  bottom: 100%;
+  opacity: 0;
+}
+
+img.social-icon {
+  width: 118px;
+  height: 55px;
+  margin-bottom: -120px;
+  position: relative;
+  top: 100%;
+  opacity: 0;
+}
+
+#team li {
+  float: left;
+  width: 306px;
+  margin: 35px 35px;
+}
+
+#team li:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+#team li:nth-of-type(3n-2) {
+  margin-left: 0;
+}
+
+#team section > footer {
+  clear: both;
+  display: block;
+  position: absolute;
+  bottom: -980px;
+  left: 49%;
+}
+
+#team footer > a {
+  left: 50%;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #1865f1;
+}
+
+section#team {
+  overflow: hidden;
+  height: 850px;
+}

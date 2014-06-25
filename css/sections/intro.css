@@ -1,0 +1,31 @@
+#intro header {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#header {
+  font-size: 48px;
+  margin-bottom: 45px;
+}
+
+#subheader {
+  font-size: 30px;
+  margin-bottom: 190px;
+  text-transform: none;
+}
+
+#intro section {
+  text-align: center;
+}
+
+#intro section > p {
+  width: 800px;
+  margin: auto;
+  color: #6b6c70;
+  line-height: 140%;
+}
+
+#call-to-action {
+  font-weight: bold;
+}

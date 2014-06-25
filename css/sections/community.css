@@ -1,0 +1,27 @@
+#community li {
+  margin-bottom: 30px;
+}
+
+#community figure {
+  position: relative;
+  height: 122px;
+}
+
+#community figure > img {
+  width: 122px;
+  height: 122px;
+  -webkit-border-radius: 50%;
+  padding-left: 10px;
+}
+
+#community figcaption {
+  position: relative;
+  left: 202px;
+  top: -114px;
+  width: 818px;
+}
+
+#community figcaption > header {
+  margin-bottom: 22px;
+  font-size: 22px;
+}
