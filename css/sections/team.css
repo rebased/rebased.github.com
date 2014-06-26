@@ -70,9 +70,12 @@
   opacity: 0;
 }
 
+img.social-icon, #team footer > a {
+  width: 50px;
+  height: 50px;
+}
+
 img.social-icon {
-  width: 118px;
-  height: 55px;
   margin-bottom: -120px;
   position: relative;
   top: 100%;
@@ -96,14 +99,18 @@ img.social-icon {
 #team section > footer {
   clear: both;
   display: block;
-  position: absolute;
-  bottom: -980px;
-  left: 49%;
+  position: relative;
+  top: -760px;
+  left: 505px;
+  /*background-color: yellow;*/
+  width: 50px;
 }
 
 #team footer > a {
-  left: 50%;
+  display: inline-block;
   font-size: 14px;
+  margin: 0;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #1865f1;
@@ -111,5 +118,6 @@ img.social-icon {
 
 section#team {
   overflow: hidden;
-  height: 850px;
+  height: 860px;
+  /*background-color: red;*/
 }
