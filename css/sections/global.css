@@ -36,6 +36,21 @@ main > section > header {
   font-size: 37px;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
+}
+
+main > section > header:after {
+  content: '';
+  width: 96px;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  margin-left: -48px;
+  background-color: #186bf5;
+  bottom: -14px;
+}
+main > section#intro > header:after {
+  display: none;
 }
 
 main > section {
@@ -76,4 +91,16 @@ li a {
   text-decoration: none;
   color: #3e404f;
   font-size: 14px;
+  position: relative;
+}
+
+nav li > a:hover:after {
+  content: '';
+  width: 22px;
+  height: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -11px;
+  background-color: #2888f8;
+  bottom: -6px;
 }
