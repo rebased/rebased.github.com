@@ -102,7 +102,6 @@ img.social-icon {
   position: relative;
   top: -760px;
   left: 505px;
-  /*background-color: yellow;*/
   width: 50px;
 }
 
@@ -119,5 +118,12 @@ img.social-icon {
 section#team {
   overflow: hidden;
   height: 860px;
-  /*background-color: red;*/
+}
+
+section#team.extend-section {
+  height: 1620px;
+}
+
+#team section > footer.extend-footer {
+  top: -10px;
 }
