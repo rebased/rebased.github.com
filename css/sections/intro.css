@@ -1,31 +1,56 @@
 #intro header {
-  text-align: center;
-  font-weight: bold;
   color: white;
 }
 
 #header {
-  font-size: 48px;
-  margin-bottom: 45px;
+  font-size: 61px;
+  margin: 0 0 34px -7px;
 }
 
 #subheader {
-  font-size: 30px;
-  margin-bottom: 190px;
+  font-size: 36px;
+  margin: 0 0 190px -2px;
   text-transform: none;
+  font-weight: 600;
+  padding-left: 21px;
 }
 
 #intro section {
-  text-align: center;
+  position: relative;
 }
 
-#intro section > p {
+#intro section p {
   width: 800px;
   margin: auto;
-  color: #6b6c70;
+  color: rgb( 71, 71, 71 );
   line-height: 140%;
+  font-weight: 100;
+  letter-spacing: 0.1px;
+  font-size: 21px;
 }
 
-#call-to-action {
-  font-weight: bold;
+#intro section > p > span#call-to-action {
+  font-weight: 700;
 }
+
+section#intro > section > p:first-of-type:before, section#intro > section > p:first-of-type:after {
+  display: inline-block;
+  font-size: 116px;
+  font-family: 'Montserrat', sans-serif;
+  color: #2888f8;
+  position: absolute;
+  top: 31px;
+}
+
+section#intro > section > p:first-of-type:before {
+  content: '{';
+  float: left;
+  left: 7px;
+}
+
+section#intro > section > p:first-of-type:after {
+  content: '}';
+  float: right;
+  right: 7px;
+}
+

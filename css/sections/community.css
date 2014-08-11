@@ -1,27 +1,43 @@
 #community li {
-  margin-bottom: 30px;
+  padding-bottom: 32px;
 }
 
 #community figure {
-  position: relative;
   height: 122px;
 }
 
 #community figure > img {
-  width: 122px;
-  height: 122px;
-  -webkit-border-radius: 50%;
   padding-left: 10px;
 }
 
 #community figcaption {
   position: relative;
-  left: 202px;
+  left: 222px;
   top: -114px;
   width: 818px;
 }
 
 #community figcaption > header {
-  margin-bottom: 22px;
-  font-size: 22px;
+  margin-bottom: 12px;
+  margin-top: -2px;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb( 71, 71, 71 );
+  line-height: 90%;
 }
+
+
+#community figcaption > p {
+  font-size: 14px;
+  line-height: 160%;
+  font-weight: 100; 
+}
+
+section#community > header {
+  margin-bottom: 50px;
+}
+
+section#community > ul {
+  padding-top: 20px;
+}
+
