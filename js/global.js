@@ -79,29 +79,3 @@
   $(window).on('scroll', scrollSpy);
 
 });
-
-
-// !!!
-// var activeProjects = function(e) {
-//   var menuItems = document.getElementsByTagName("nav")[0].getElementsByTagName("a");
-//   var window = document.defaultView;
-  
-
-  // for (i = 0; i < menuItems.length; i++) {
-  //   var item = menuItems[i];
-  //   var toTop = document.body.scrollTop;
-  //   var sectionId = item.getAttribute("href").slice(1);
-  //   var section = document.getElementById(sectionId).getBoundingClientRect();
-  //   var sectionBegin = section.top + toTop //toTop - Math.abs(section.top);
-  //   var sectionEnd = section.bottom + toTop // toTop - Math.abs(section.bottom);
-  //   if ((window.pageYOffset >= sectionBegin) && (window.pageYOffset <= sectionEnd)) {
-  //     item.className = "active";
-  //   } else {
-  //     item.className = "";
-  //   };
-  // };
-// }
-
-// document.addEventListener("scroll", activeProjects, false);
-// window.onscroll = scrollSite;
-// window.onload = activeProjects;
