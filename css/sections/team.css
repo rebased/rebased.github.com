@@ -110,6 +110,18 @@ img.github {
   display: inline-block;
 }
 
+a.hide-twitter {
+  margin: auto
+}
+
+#team footer a.hide {
+  display: none;
+}
+
+.hide-twitter img.twitter, .hide-github img.github {
+  display: none;
+}
+
 img.twitter, img.github {
   margin-bottom: -120px;
   position: relative;
