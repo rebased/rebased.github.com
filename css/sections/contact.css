@@ -1,29 +1,45 @@
-section#contact > img {
-  position: relative;
-  top: 70px;
-  left: -160px;
-  float: right;
+section#contact {
+  width: 1052px;
+  margin: auto;
+}
+
+section#contact > .map {
+  display: inline-block;
+}
+
+section#contact > .map-lower {
+  display: none;
+  width: 515px;
+  margin: auto;
 }
 
 section#contact >  figure {
   padding-top: 30px;
+  width: 515px;
+  display: inline-block;
+  margin: auto;
 }
 
-#contact figure > img {
-  float: left;
-  padding-left: 10px;
+#contact figcaption > div {
+  padding-left: 70px;
+  width: 425px;
+  margin: auto;
+}
+
+#contact figure img {
+  margin: auto;
+  position: relative;
+  padding-bottom: 100px;
+  display: block;
 }
 
 section#contact figcaption {
   position: relative;
 }
 
-#contact figcaption > section:first-of-type,
-#contact figcaption > section:last-of-type {
-  position: absolute;
-  width: 180px;
-  height: 184px;
-  top: 224px;
+#contact figcaption > div > section:first-of-type,
+#contact figcaption > div >section:last-of-type {
+  width: 200px;
   display: inline-block;
 }
 
@@ -32,8 +48,8 @@ section#contact figcaption {
 
 }
 
-#contact figcaption > section:last-of-type {
-  left: 886px;
+#contact figcaption > div > section:last-of-type {
+  padding-left: 20px;
 }
 
 #title, #contact figcaption address {

@@ -1,23 +1,26 @@
+#community > ul {
+  max-width: 1052px;
+  width: 100%;
+  margin: auto;
+}
+
 #community li {
   padding-bottom: 32px;
 }
 
-#community figure {
-  height: 122px;
-}
-
-#community figure > img {
+#community img {
   padding-left: 10px;
+  padding-right: 70px;
+  display: inline-block;
 }
 
-#community figcaption {
-  position: relative;
-  left: 222px;
-  top: -114px;
-  width: 818px;
+#community .community-project {
+  max-width: 1052px;
+  max-width: 80%;
+  display: inline-block;
 }
 
-#community figcaption > header {
+#community .community-project > header {
   margin-bottom: 12px;
   margin-top: -2px;
   font-size: 30px;
@@ -27,10 +30,10 @@
 }
 
 
-#community figcaption > p {
+#community .community-project > p {
   font-size: 14px;
   line-height: 160%;
-  font-weight: 100; 
+  font-weight: 100;
 }
 
 section#community > header {

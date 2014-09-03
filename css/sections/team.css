@@ -1,7 +1,3 @@
-#team {
-  margin-bottom: 92px;
-}
-
 #team figure {
   position: relative;
   margin: 0;
@@ -77,6 +73,10 @@
   opacity: 0;
 }
 
+#team figcaption footer{
+  margin-top: 75px;
+}
+
 #team figcaption > p {
   width: 294px;
   margin: auto;
@@ -105,7 +105,7 @@ img.github {
 }
 
 #team footer a {
-  width: 50px;
+  width: 51px;
   height: 50px;
   display: inline-block;
 }
@@ -122,12 +122,6 @@ a.hide-twitter {
   display: none;
 }
 
-img.twitter, img.github {
-  margin-bottom: -120px;
-  position: relative;
-  top: 100%;
-  opacity: 0;
-}
 
 #team li {
   float: left;
@@ -150,7 +144,7 @@ img.twitter, img.github {
   top: -1129px;
   width: 100%;
   margin: auto;
-  background-color: white; 
+  background-color: white;
 }
 
 #team section > footer > a.toggle-button {
@@ -165,7 +159,7 @@ img.twitter, img.github {
 }
 
 hr.divider-line, hr.extend-divider-line {
-  position: absolute;
+  position: relative;
   height: 1px;
   color: rgb(160, 160, 160);
   width: 100%;
@@ -173,23 +167,23 @@ hr.divider-line, hr.extend-divider-line {
 }
 
 hr.divider-line {
-  top: 1353px;
+  top: -92px;
 }
 
 div.divider-button-background, div.extend-divider-button-background {
-  width: 1060px;
   background-color: white;
   height: 40px;
   overflow: visible;
-  position: absolute;
+  position: relative;
+  top: -38px;
 }
 
+
 a.divider-button {
+  display: block;
   width: 62px;
-  position: relative;
-  left: 498px;
   height: 31px;
-  top: 0;
+  margin: auto;
 }
 
 a.divider-button > img {
@@ -197,16 +191,15 @@ a.divider-button > img {
   overflow: hidden;
   position: relative;
   top: 1px;
-  z-index: 2222;  
-}
-
-div.divider-button-background {
-  top: 1367px;
+  z-index: 2222;
 }
 
 #team > section {
   overflow: hidden;
   height: 826px;
+  max-width: 1058px;
+  width: 100%;
+  margin: auto;
 }
 
 #team section.extend-section {
@@ -218,16 +211,26 @@ div.divider-button-background {
 }
 
 #team hr.extend-divider-line {
-  top: 2495px;
+  top: -85px;
 }
 
 #team div.extend-divider-button-background {
-  top: 2480px;
+  top: -60px;
 }
 
 div.extend-divider-button-background a.divider-button img {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+  position: relative;
+  bottom: 22px;
 }
 
+.twitter, .github{
+  background: url('../../images/twitter.png') no-repeat center center;
+  margin: 5px;
+}
+
+.github{
+  background: url('../../images/github.png') no-repeat;
+}
