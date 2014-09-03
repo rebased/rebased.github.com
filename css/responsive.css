@@ -1,0 +1,161 @@
+@media(max-width: 1029px){
+  body{
+    background: url('../images/site-background.png') no-repeat center -485px;
+  }
+}
+
+@media (max-width: 1080px) {
+
+  #team ul{
+    width: 675px;
+    height: 100%;
+    margin: auto;
+  }
+
+  #team li {
+    width: 685px;
+    margin: 30px auto;
+  }
+
+  #team figure {
+    width: 750px;
+    margin: auto;
+  }
+
+  #team figure img {
+    top: 0;
+    opacity: 1;
+  }
+
+  #team figure header {
+    margin-top: 132px;
+    font-size: 44px;
+    font-weight: 800;
+    top: 0;
+  }
+
+  #team figure p {
+    bottom: 0;
+    overflow: visible;
+    opacity: 1;
+  }
+
+  #team figcaption header p{
+    opacity: 1;
+  }
+
+  #team figure figcaption{
+    color: #000;
+    cursor: default;
+    display: inline-block;
+    width: 435px;
+    padding-bottom: 25px;
+    position: relative;
+  }
+
+  .twitter, .github{
+    background: url('../images/twitter_rev.png') no-repeat center center;
+    margin: 5px;
+  }
+
+  .github{
+    background: url('../images/github_rev.png') no-repeat;
+  }
+
+  #team figure:hover figcaption {
+    background: transparent;
+  }
+
+  #team > section{
+    height: 800px;
+
+  }
+
+  #team section > footer {
+    top: -4880px
+  }
+
+  #team section.extend-section {
+    height: 5670px;
+  }
+
+  #team hr.extend-divider-line {
+    top: -84px;
+  }
+
+  #team section > footer.extend-footer {
+    top: -20px;
+  }
+
+  /*projects*/
+
+  #projects ul {
+    width: 702px;
+  }
+
+  #projects li {
+    border: none;
+  }
+
+  #projects li:nth-of-type(3n-1) {
+    border-width: 0;
+  }
+
+  #projects li:nth-of-type(-n+3) {
+    border: none;
+  }
+
+  #projects li:nth-of-type(odd) {
+    border-right: solid 1px #d6d6d6;
+    border-color: #d6d6d6;
+  }
+
+  #projects li:nth-of-type(3), #projects li:nth-of-type(4){
+    border-top: solid 1px #d6d6d6;
+    border-bottom: solid 1px #d6d6d6;
+  }
+
+/*  open sauce */
+
+  #open-source .open-source-project > ul {
+    position: relative;
+    top: 15px;
+    left: 0px;
+  }
+
+  section#open-source > ul > li {
+    max-width: 720px;
+    margin: auto;
+  }
+
+/*  community */
+
+
+  #community .community-project {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  #community li {
+    max-width: 880px;
+    margin: auto;
+  }
+
+/*  contact*/
+
+  section#contact > .map {
+    display: none;
+  }
+  section#contact > .map-lower {
+    display: block;
+  }
+
+  section#contact > figure {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  #contact figure img {
+    padding-bottom: 50px;
+  }
+}

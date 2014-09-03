@@ -3,9 +3,8 @@ body {
   font-family: 'Roboto', sans-serif;
   background: url('../../images/site-background.png') no-repeat center -538px;
   position: relative;
-  min-width: 1348px;
   width: 100%;
-  margin: auto; 
+  margin: auto;
 }
 
 .text-center {
@@ -56,7 +55,8 @@ main {
   overflow: hidden;
   margin: auto;
   margin-top: 245px;
-  width: 1348px;
+  width: 100%;
+  max-width: 1348px;
 }
 
 body > footer {
@@ -94,9 +94,6 @@ main > section > header:after {
   display: none;
 }
 
-main > section {
-  margin: 0 144px;
-}
 
 #intro, #projects, #open-source, #community, #contact {
   margin-bottom: 60px;
