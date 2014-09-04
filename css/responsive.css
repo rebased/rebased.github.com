@@ -1,4 +1,4 @@
-@media(max-width: 1029px){
+@media(max-width: 1029px) {
   body{
     background: url('../images/site-background.png') no-repeat center -485px;
   }
@@ -67,12 +67,11 @@
   }
 
   #team > section{
-    height: 800px;
-
+    height: 1160px;
   }
 
   #team section > footer {
-    top: -4880px
+    top: -4520px
   }
 
   #team section.extend-section {
@@ -157,5 +156,56 @@
 
   #contact figure img {
     padding-bottom: 50px;
+  }
+}
+
+@media(max-width: 1000px) {
+  body > header{
+    height: 65px;
+    background-color: white;
+    border-bottom: 1px solid #d6d6d6;
+    z-index: 9999;
+  }
+
+  .header-main > nav {
+    padding-right: 50px;
+    width: 300px;
+  }
+
+  .main-menu {
+    display: none;
+  }
+
+  .mobile-menu{
+    display: block;
+  }
+}
+
+@media(max-width: 760px){
+  .header-main > h1 {
+    left: 70px;
+  }
+
+  .open-source-project {
+    padding-left: 10px;
+  }
+
+  #open-source div > .open-source-project {
+    max-width: 400px;
+  }
+
+  section#open-source > ul > li {
+    max-width: 550px;
+    min-width: 550px;
+    margin: auto;
+  }
+
+  #community .community-project {
+    max-width: 60%;
+  }
+
+  #community li {
+    max-width: 550px;
+    margin: auto;
   }
 }

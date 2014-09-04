@@ -1,5 +1,6 @@
 section#contact {
-  width: 1052px;
+  max-width: 1052px;
+  width: 100%;
   margin: auto;
 }
 

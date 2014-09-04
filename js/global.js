@@ -73,9 +73,20 @@
     };
   }
 
+  $('.menu-controls').on('click', function(){
+    if ($('.mobile-menu-links').is(":visible")) {
+      $('.mobile-menu-links').slideUp();
+      $(this).css('border-radius', '6px 6px 6px 6px')
+    }else{
+      $('.mobile-menu-links').slideDown();
+      $(this).css('border-radius', '0')
+    }
+  })
+
   $("#team").on("click", ".toggle-button", hideOrShowTeam);
   $("#team").on("click", ".divider-button", hideOrShowTeam);
   $(window).on('scroll', scrollSite);
   $(window).on('scroll', scrollSpy);
+
 
 });
