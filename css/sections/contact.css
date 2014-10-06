@@ -2,6 +2,11 @@ section#contact {
   max-width: 1052px;
   width: 100%;
   margin: auto;
+  min-width: 0px;
+}
+
+section.contact-address {
+  min-width: 0px;
 }
 
 section#contact > .map {
