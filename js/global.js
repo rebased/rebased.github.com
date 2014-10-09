@@ -73,7 +73,7 @@
     };
   }
 
-  $('.menu-controls').on('click', function(){
+  function toggleMenu() {
     if ($('.mobile-menu-links').is(":visible")) {
       $('.mobile-menu-links').slideUp();
       $(this).css('border-radius', '6px 6px 6px 6px')
@@ -81,7 +81,24 @@
       $('.mobile-menu-links').slideDown();
       $(this).css('border-radius', '0')
     }
+    return
+  }
+
+  $('.menu-controls').on('click', function(){
+    event.stopPropagation();
+    toggleMenu();
   })
+
+
+  $('body').click(function(e){
+    if ($('.mobile-menu-links').is(":visible")) {
+      toggleMenu();
+    }
+  });
+
+
+
+
 
   $("#team").on("click", ".toggle-button", hideOrShowTeam);
   $("#team").on("click", ".divider-button", hideOrShowTeam);

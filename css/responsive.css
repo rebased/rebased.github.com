@@ -71,7 +71,7 @@
   }
 
   #team section > footer {
-    top: -4520px
+    top: -4505px
   }
 
   #team section.extend-section {
@@ -127,6 +127,11 @@
     margin: auto;
   }
 
+  #open-source div {
+    height: 100%;
+    clear: both;
+  }
+
 /*  community */
 
 
@@ -179,12 +184,48 @@
   .mobile-menu{
     display: block;
   }
+
+   body > header, header.visible {
+    height: 130px;
+  }
+
+  .header-main > h1 {
+    left: 70px;
+    top: 48px;
+  }
+
+  .mobile-menu {
+    top: 5px;
+  }
+
+  .menu-button {
+    height: 55px;
+    background-image: url("../../images/sapphire-menu-bg2.png");
+  }
+
+  .menu-button span {
+    margin-top: 10px;
+    width: 65px;
+    height: 7px;
+  }
+
+  nav li a {
+    font-size: 32px;
+  }
+
+  .menu-controls {
+    background-image: url("../../images/sapphire-menu-bg2.png");
+    height: 71px;
+  }
+
+  .menu-title {
+    top: 18px;
+    font-size: 32px;
+  }
 }
 
 @media(max-width: 760px){
-  .header-main > h1 {
-    left: 70px;
-  }
+
 
   .open-source-project {
     padding-left: 10px;

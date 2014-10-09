@@ -12,6 +12,7 @@
   padding-left: 10px;
   padding-right: 70px;
   display: inline-block;
+  vertical-align: top;
 }
 
 #community .community-project {
