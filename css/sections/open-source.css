@@ -32,7 +32,6 @@ section#open-source .open-source-project > ul > li.team,
 #open-source .open-source-project li > img,
 #open-source div li > a {
   width: 95px;
-  height: 95px;
 }
 
 #open-source .open-source-project > ul {
@@ -40,7 +39,7 @@ section#open-source .open-source-project > ul > li.team,
   left: 600px;
   top: 0px;
   width: 350px;
-  height: 95px;
+  padding-bottom: 10px;
 }
 
 
