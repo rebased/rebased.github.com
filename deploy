@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo 'Pushing...'
+rsync -avz --delete --exclude .git . rebased@rebased.pl:~/rebased.pl/
