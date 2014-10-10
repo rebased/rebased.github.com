@@ -61,6 +61,7 @@ section#open-source .open-source-project > ul > li.team {
   margin: 0;
   background: rgba(25, 107, 246, 0.8);
   opacity: 0;
+  height: 95px;
 }
 
 #open-source div li > a > img {

@@ -28,7 +28,7 @@
   }
 
   #team figure header {
-    margin-top: 132px;
+    margin-top: 100px;
     font-size: 44px;
     font-weight: 800;
     top: 0;
@@ -49,8 +49,13 @@
     cursor: default;
     display: inline-block;
     width: 435px;
-    padding-bottom: 25px;
-    position: relative;
+    position: absolute;
+    top: 20px;
+  }
+
+  .empty {
+    height: 50px;
+    display: block;
   }
 
   .twitter, .github{
@@ -71,11 +76,11 @@
   }
 
   #team section > footer {
-    top: -4505px
+    top: -4435px
   }
 
   #team section.extend-section {
-    height: 5670px;
+    height: 5650px;
   }
 
   #team hr.extend-divider-line {

@@ -64,7 +64,11 @@ nav ul li a:hover:after {
 }
 
 .mobile-menu-links{
-  display: none;
+  height: 0px;
+  transition: height 1s, linear;
+  -webkit-transition: height 1s, linear;
+  -moz-transition: height 1s, ease-in;
+  -o-transition: height 1s, ease-in;
 }
 
 .mobile-menu{
