@@ -74,7 +74,6 @@
   }
 
   function toggleMenu() {
-    console.log($('.mobile-menu-links').css('height'))
     if ($('.mobile-menu-links').css('height') == '270px') {
       $('.mobile-menu-links').css('height', '0px')
     }else{
