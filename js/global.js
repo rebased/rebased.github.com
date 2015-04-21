@@ -3,11 +3,11 @@
   function hideOrShowTeam() {
     var wholeSection = $("#team");
 
-    var sectionToToggle = wholeSection.children('section'); //zmieniamy wysokość sekcji
-    var teamDividerLine = wholeSection.children().last(); //zmieniamy położenie hr
-    var teamFooter = sectionToToggle.children().last(); // zmieniamy położenie stopki z MORE/LESS
-    var moreLessButton = teamFooter.children().last(); // zmieniamy położenie MORE/LESS
-    var triangleButtonBackground = wholeSection.children('div'); //tło do trójkącika
+    var sectionToToggle = wholeSection.children('section');
+    var teamDividerLine = wholeSection.children().last();
+    var teamFooter = sectionToToggle.children().last();
+    var moreLessButton = teamFooter.children().last();
+    var triangleButtonBackground = wholeSection.children('div');
 
     if (sectionToToggle.attr('class') == "to-toggle") {
 

@@ -203,7 +203,7 @@ a.divider-button > img {
 }
 
 #team section.extend-section {
-  height: 1961px;
+  height: auto;
 }
 
 #team section > footer.extend-footer {
