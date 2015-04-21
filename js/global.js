@@ -1,4 +1,4 @@
-  $('document').ready(function() {
+$('document').ready(function() {
 
   function hideOrShowTeam() {
     var wholeSection = $("#team");
@@ -76,33 +76,26 @@
   function toggleMenu() {
     if ($('.mobile-menu-links').css('height') == '270px') {
       $('.mobile-menu-links').css('height', '0px')
-    }else{
+    } else {
       $('.mobile-menu-links').css('height', '270px')
       $(this).css('border-radius', '0')
     }
     return
   }
 
-  $('.menu-controls').on('click', function(){
+  $('.menu-controls').on('click', function() {
     event.stopPropagation();
     toggleMenu();
   })
 
-
-  $('body').click(function(e){
+  $('body').click(function(e) {
     if ($('.mobile-menu-links').css('height') == '270px') {
       toggleMenu();
     }
   });
 
-
-
-
-
   $("#team").on("click", ".toggle-button", hideOrShowTeam);
   $("#team").on("click", ".divider-button", hideOrShowTeam);
   $(window).on('scroll', scrollSite);
   $(window).on('scroll', scrollSpy);
-
-
 });
