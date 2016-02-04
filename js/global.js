@@ -74,10 +74,10 @@ $('document').ready(function() {
   }
 
   function toggleMenu() {
-    if ($('.mobile-menu-links').css('height') == '270px') {
+    if ($('.mobile-menu-links').css('height') == '324px') {
       $('.mobile-menu-links').css('height', '0px')
     } else {
-      $('.mobile-menu-links').css('height', '270px')
+      $('.mobile-menu-links').css('height', '324px')
       $(this).css('border-radius', '0')
     }
     return
