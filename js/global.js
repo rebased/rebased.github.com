@@ -44,40 +44,46 @@ $('document').ready(function() {
   function scrollSpy() {
     var currentActive = $('.active-section') || $('nav');
     var position = window.pageYOffset;
+    var main_page = $('#main_page');
+    if(main_page.length === 1) {
+      var sectionTeamEnter = $('#team').position().top;
+      var sectionProjectsEnter = $('#projects').position().top;
+      var sectionOpenSourceEnter = $('#open-source').position().top;
+      var sectionCommunityEnter = $('#community').position().top;
+      var sectionContactEnter = $('#contact').position().top;
+      var sectionTeamExit = sectionProjectsEnter;
+      var sectionProjectsExit = sectionOpenSourceEnter;
+      var sectionOpenSourceExit = sectionCommunityEnter;
+      var sectionCommunityExit = sectionContactEnter;
 
-    var sectionTeamEnter = $('#team').position().top;
-    var sectionProjectsEnter = $('#projects').position().top;
-    var sectionOpenSourceEnter = $('#open-source').position().top;
-    var sectionCommunityEnter = $('#community').position().top;
-    var sectionContactEnter = $('#contact').position().top;
-    var sectionTeamExit = sectionProjectsEnter;
-    var sectionProjectsExit = sectionOpenSourceEnter;
-    var sectionOpenSourceExit = sectionCommunityEnter;
-    var sectionCommunityExit = sectionContactEnter;
-
-    if (position >= sectionTeamEnter && position < sectionTeamExit) {
-      currentActive.removeClass('active-section');
-      $('a[href="#team"]').next().addClass('active-section');
-    } else if (position >= sectionProjectsEnter && position < sectionProjectsExit) {
-      currentActive.removeClass('active-section');
-      $('a[href="#projects"]').next().addClass('active-section');
-    } else if (position >= sectionOpenSourceEnter && position < sectionOpenSourceExit) {
-      currentActive.removeClass('active-section');
-      $('a[href="#open-source"]').next().addClass('active-section');
-    } else if (position >= sectionCommunityEnter && position < sectionCommunityExit) {
-      currentActive.removeClass('active-section');
-      $('a[href="#community"]').next().addClass('active-section');
-    } else if (position >= sectionContactEnter) {
-      currentActive.removeClass('active-section');
-      $('a[href="#contact"]').next().addClass('active-section');
-    };
+      if (position >= sectionTeamEnter && position < sectionTeamExit) {
+        currentActive.removeClass('active-section');
+        $('a[href="#team"]').next().addClass('active-section');
+      } else if (position >= sectionProjectsEnter && position < sectionProjectsExit) {
+        currentActive.removeClass('active-section');
+        $('a[href="#projects"]').next().addClass('active-section');
+      } else if (position >= sectionOpenSourceEnter && position < sectionOpenSourceExit) {
+        currentActive.removeClass('active-section');
+        $('a[href="#open-source"]').next().addClass('active-section');
+      } else if (position >= sectionCommunityEnter && position < sectionCommunityExit) {
+        currentActive.removeClass('active-section');
+        $('a[href="#community"]').next().addClass('active-section');
+      } else if (position >= sectionContactEnter) {
+        currentActive.removeClass('active-section');
+        $('a[href="#contact"]').next().addClass('active-section');
+      };
+    }
   }
 
+  var linkHeight = 54,
+      numberOfLinks = $('.mobile-menu-links li').length,
+      mobileMenuLinksHeight = linkHeight * numberOfLinks + "px";
+
   function toggleMenu() {
-    if ($('.mobile-menu-links').css('height') == '324px') {
+    if ($('.mobile-menu-links').css('height') == mobileMenuLinksHeight) {
       $('.mobile-menu-links').css('height', '0px')
     } else {
-      $('.mobile-menu-links').css('height', '324px')
+      $('.mobile-menu-links').css('height', mobileMenuLinksHeight)
       $(this).css('border-radius', '0')
     }
     return
@@ -89,7 +95,7 @@ $('document').ready(function() {
   })
 
   $('body').click(function(e) {
-    if ($('.mobile-menu-links').css('height') == '270px') {
+    if ($('.mobile-menu-links').css('height') == mobileMenuLinksHeight) {
       toggleMenu();
     }
   });
