@@ -1072,3 +1072,27 @@ section#open-source > ul,#community > ul {
     margin: auto;
   }
 }
+.job-offer {
+  padding: 0px 50px;
+  margin-top: 380px;
+}
+.job-offer p {
+  line-height: 150%;
+  font-weight: 100;
+}
+
+.job-offer ul {
+  list-style: initial;
+  padding-left: 20px;
+}
+
+.job-offer li {
+  line-height: 150%;
+}
+.job-offer h2 {
+  font-size: 18px;
+  line-height: 300%;
+}
+.job-offer footer {
+  margin-top: 20px;
+}
