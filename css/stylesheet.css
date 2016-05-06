@@ -411,12 +411,6 @@ img.github {
   margin-left: -15px;
 }
 
-#team footer a {
-  width: 51px;
-  height: 50px;
-  display: inline-block;
-}
-
 a.hide-twitter {
   margin: auto;
 }
@@ -433,27 +427,6 @@ a.hide-twitter {
 
 #team li:nth-of-type(3n-2) {
   margin-left: 0;
-}
-
-#team section > footer {
-  clear: both;
-  display: block;
-  position: relative;
-  top: -1129px;
-  width: 100%;
-  background-color: #FFF;
-  margin: auto;
-}
-
-#team section > footer > a.toggle-button {
-  width: 100%;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #1865f1;
-  font-weight: 900;
-  letter-spacing: -1.8px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 hr.divider-line,hr.extend-divider-line {
@@ -518,10 +491,6 @@ a.divider-button > img {
   height: auto;
 }
 
-#team section > footer.extend-footer {
-  top: 53px;
-}
-
 #team hr.extend-divider-line {
   top: -85px;
 }
@@ -531,6 +500,7 @@ a.divider-button > img {
 }
 
 div.extend-divider-button-background a.divider-button img {
+  margin-top: 10px;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -909,20 +879,12 @@ section#open-source > ul,#community > ul {
     height: 1260px;
   }
 
-  #team section > footer {
-    top: -4435px;
-  }
-
   #team section.extend-section {
     height: auto;
   }
 
   #team hr.extend-divider-line {
     top: -84px;
-  }
-
-  #team section > footer.extend-footer {
-    top: -20px;
   }
 
   #projects ul {
