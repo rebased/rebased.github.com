@@ -45,34 +45,14 @@ var rebased = {
     };
   },
 
-  showHoverOnCurrentTab: function(tab) {
-    $('.active-section').removeClass('active-section');
-    tab.next().addClass('active-section');
-  },
-
   scrollSpy: function() {
-    var position = window.pageYOffset,
-        sectionTeamEnter = $('#team').position().top,
-        sectionProjectsEnter = $('#projects').position().top,
-        sectionOpenSourceEnter = $('#open-source').position().top,
-        sectionCommunityEnter = $('#community').position().top,
-        sectionContactEnter = $('#contact').position().top;
-    var sectionTeamExit = sectionProjectsEnter,
-        sectionProjectsExit = sectionOpenSourceEnter,
-        sectionOpenSourceExit = sectionCommunityEnter,
-        sectionCommunityExit = sectionContactEnter;
-
-    if (position >= sectionTeamEnter && position < sectionTeamExit) {
-      rebased.showHoverOnCurrentTab($('a[href="#team"]'));
-    } else if (position >= sectionProjectsEnter && position < sectionProjectsExit) {
-      rebased.showHoverOnCurrentTab($('a[href="#projects"]'));
-    } else if (position >= sectionOpenSourceEnter && position < sectionOpenSourceExit) {
-      rebased.showHoverOnCurrentTab($('a[href="#open-source"]'));
-    } else if (position >= sectionCommunityEnter && position < sectionCommunityExit) {
-      rebased.showHoverOnCurrentTab($('a[href="#community"]'));
-    } else if (position >= sectionContactEnter) {
-      rebased.showHoverOnCurrentTab($('a[href="#contact"]'));
-    };
+    var position = window.pageYOffset;
+    $('.active-section').removeClass('active-section');
+    $('#main_page > section').each(function(index, section) {
+      if( section.offsetTop <= position && position <= ( section.offsetHeight + section.offsetTop) ) {
+        $('a[href="#' + section.id+ '"]').next().addClass('active-section');
+      }
+    })
   }
 }
 
