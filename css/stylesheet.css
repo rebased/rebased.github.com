@@ -128,18 +128,23 @@ header {
 
 h1 {
   display: block;
-  text-indent: -9999px;
-  background: url(../images/rebased-logo-full.png) no-repeat;
-  width: 200px;
-  height: 40px;
   position: relative;
+}
+
+h1 a {
+  background: url(../images/rebased-logo-full.png) no-repeat;
+  display: block;
+  position: relative;
+  width: 200px;
+  text-indent: -9999px;
+  height: 40px;
   top: 20px;
   left: 148px;
 }
 
 nav {
   height: 24px;
-  padding: 25px 80px 0 0;
+  padding: 25px 50px 0 0;
 }
 
 nav li {
@@ -759,11 +764,31 @@ section#open-source > ul,#community > ul {
   margin: auto;
 }
 
-@media(max-width: 1029px) {
-  body {
-    background: url(../images/site-background.jpg) no-repeat center -485px;
-  }
+.job-offer {
+  padding: 0px 50px;
+  margin-top: 380px;
 }
+.job-offer p {
+  line-height: 150%;
+  font-weight: 100;
+}
+
+.job-offer ul {
+  list-style: initial;
+  padding-left: 20px;
+}
+
+.job-offer li {
+  line-height: 150%;
+}
+.job-offer h2 {
+  font-size: 18px;
+  line-height: 300%;
+}
+.job-offer footer {
+  margin-top: 20px;
+}
+
 
 @media(max-width: 1080px) {
   body > header {
@@ -917,12 +942,21 @@ section#open-source > ul,#community > ul {
   }
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1029px) {
+  body {
+    background: url(../images/site-background.jpg) no-repeat center -485px;
+  }
+
   body > header {
     height: 65px;
     background-color: #FFF;
     border-bottom: 1px solid #d6d6d6;
     z-index: 9999;
+  }
+
+  h1 a {
+    top: 0px;
+    left: 0px;
   }
 
   .header-main > nav {
@@ -1025,28 +1059,4 @@ section#open-source > ul,#community > ul {
     max-width: 550px;
     margin: auto;
   }
-}
-.job-offer {
-  padding: 0px 50px;
-  margin-top: 380px;
-}
-.job-offer p {
-  line-height: 150%;
-  font-weight: 100;
-}
-
-.job-offer ul {
-  list-style: initial;
-  padding-left: 20px;
-}
-
-.job-offer li {
-  line-height: 150%;
-}
-.job-offer h2 {
-  font-size: 18px;
-  line-height: 300%;
-}
-.job-offer footer {
-  margin-top: 20px;
 }
