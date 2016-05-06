@@ -164,38 +164,13 @@ nav ul li a:hover:after {
   bottom: -6px;
 }
 
-.mobile-menu-links {
-  height: 0;
-  transition: height 0.5s linear;
-}
-.mobile-menu-links.active {
-  height: 378px; // 7 * 54, not auto - to move it stightly down
-}
-
-.mobile-menu {
-  background-color: #555;
-  border-radius: 6px 6px 6px 6px;
-  min-height: 36px;
-  width: 300px;
-  overflow: hidden;
-  position: relative;
-  top: -10px;
-  display: none;
-  margin: 0 auto !important;
-}
-
-.mobile-menu > ul > li {
-  display: block;
-  visibility: none;
-}
-
 .menu-controls {
+  display: none;
   font-family: 'Roboto', sans-serif;
   background-image: url(../images/sapphire-menu-bg.png);
   background-repeat: repeat-x;
   border-radius: 6px 6px 6px 6px;
   color: #FFF;
-  display: block;
   height: 36px;
   position: relative;
   text-align: left;
@@ -228,25 +203,6 @@ nav ul li a:hover:after {
   height: 2px;
   margin-top: 4px;
   width: 24px;
-}
-
-.mobile-menu-links li {
-  background-color: #537698;
-  border-bottom: 1px solid #3C5779;
-  border-top: 1px solid #6883A6;
-  display: block;
-  text-align: center;
-  text-shadow: 1px 1px 1px #333;
-  width: 100%;
-  transition: height .3s, linear;
-  -webkit-transition: height .3s, linear;
-  -moz-transition: height .3s, ease-in;
-  -o-transition: height .3s, ease-in;
-  padding: 10px 0;
-}
-
-.mobile-menu-links li a {
-  color: #fff;
 }
 
 #intro header {
@@ -785,7 +741,7 @@ section#contact > figure figcaption section > header {
   text-align: center;
 }
 
-.left,#open-source div > img {
+.left,#open-source div > img, .main-menu > li {
   float: left;
 }
 
@@ -812,6 +768,10 @@ section#open-source > ul,#community > ul {
 @media(max-width: 1080px) {
   body > header {
     overflow: initial;
+  }
+
+  nav {
+    padding: 25px 0px 0px 0px;
   }
 
   #team ul {
@@ -971,12 +931,35 @@ section#open-source > ul,#community > ul {
   }
 
   .main-menu {
-    display: none;
+    opacity: 0;
+    background-color: #555;
+    border-radius: 6px 6px 6px 6px;
+    min-height: 36px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    transition: all 0.5s linear;
+    top: 5px;
+  }
+  .main-menu.active {
+    opacity: 1;
+    height: 378px; // 7 * 54, not auto - to move it stightly down
   }
 
-  .mobile-menu {
+  .main-menu li {
+    background-color: #537698;
+    border-bottom: 1px solid #3C5779;
+    border-top: 1px solid #6883A6;
     display: block;
-    top: 5px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #333;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .main-menu li a {
+    color: #fff;
   }
 
   body > header,header.visible {
@@ -1004,6 +987,7 @@ section#open-source > ul,#community > ul {
   }
 
   .menu-controls {
+    display: block;
     background-image: url(../images/sapphire-menu-bg2.png);
     height: 71px;
   }

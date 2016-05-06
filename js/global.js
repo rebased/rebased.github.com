@@ -3,7 +3,7 @@ var rebased = {
   init: function() {
     $('.menu-controls').on('click', function() {
       event.stopPropagation();
-      $('.mobile-menu-links').toggleClass('active');
+      $('.main-menu').toggleClass('active');
     })
     $("#team").on("click", ".toggle-button", rebased.hideOrShowTeam);
     $("#team").on("click", ".divider-button", rebased.hideOrShowTeam);
