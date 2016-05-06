@@ -34,13 +34,6 @@ body {
   position: absolute;
 }
 
-.visible {
-  height: 65px;
-  background-color: #FFF;
-  border-bottom: 1px solid #d6d6d6;
-  z-index: 9999;
-}
-
 main {
   overflow: hidden;
   width: 100%;
@@ -107,18 +100,24 @@ div.header-main {
 }
 
 body > header {
-  background-color: transparent;
+  width: 100%;
   position: fixed;
   overflow: auto;
   top: 0;
-  width: 100%;
   min-width: 660px;
-  height: 0;
-  transition: height .3s, linear;
-  -webkit-transition: height .3s, linear;
-  -moz-transition: height .3s, ease-in;
-  -o-transition: height .3s, ease-in;
+  height: 65px;
+  margin-top: -65px;
+  transition: all .3s, linear;
+  background-color: #FFF;
   padding: 0;
+  opacity: 0;
+  border-bottom: 1px solid #d6d6d6;
+  z-index: 9999;
+}
+
+header.visible {
+  margin-top: 0;
+  opacity: 1;
 }
 
 header {
@@ -167,10 +166,7 @@ nav ul li a:hover:after {
 
 .mobile-menu-links {
   height: 0;
-  transition: height 1s linear;
-  -webkit-transition: height 1s linear;
-  -moz-transition: height 1s ease-in;
-  -o-transition: height 1s ease-in;
+  transition: height 0.5s linear;
 }
 .mobile-menu-links.active {
   height: 378px; // 7 * 54, not auto - to move it stightly down
