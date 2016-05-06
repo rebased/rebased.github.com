@@ -3,7 +3,7 @@ var rebased = {
   init: function() {
     $('.menu-controls').on('click', function() {
       event.stopPropagation();
-      rebased.toggleMenu();
+      $('.mobile-menu-links').toggleClass('active');
     })
     $("#team").on("click", ".toggle-button", rebased.hideOrShowTeam);
     $("#team").on("click", ".divider-button", rebased.hideOrShowTeam);
@@ -12,8 +12,6 @@ var rebased = {
       $(window).on('scroll', rebased.scrollSpy);
     }
   },
-
-  mobileMenuHeight: ( 54 * $('.mobile-menu-links li').length ) + "px",
 
   toggleExtendedTeamElements: function(wholeSection) {
     var sectionToToggle = wholeSection.children('section'),
@@ -75,16 +73,6 @@ var rebased = {
     } else if (position >= sectionContactEnter) {
       rebased.showHoverOnCurrentTab($('a[href="#contact"]'));
     };
-  },
-
-  toggleMenu: function() {
-    if ($('.mobile-menu-links').css('height') == rebased.mobileMenuHeight) {
-      $('.mobile-menu-links').css('height', '0px')
-    } else {
-      $('.mobile-menu-links').css('height', rebased.mobileMenuHeight)
-      $(this).css('border-radius', '0')
-    }
-    return
   }
 }
 

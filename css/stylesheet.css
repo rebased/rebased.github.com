@@ -109,6 +109,7 @@ div.header-main {
 body > header {
   background-color: transparent;
   position: fixed;
+  overflow: auto;
   top: 0;
   width: 100%;
   min-width: 660px;
@@ -170,6 +171,9 @@ nav ul li a:hover:after {
   -webkit-transition: height 1s linear;
   -moz-transition: height 1s ease-in;
   -o-transition: height 1s ease-in;
+}
+.mobile-menu-links.active {
+  height: 378px; // 7 * 54, not auto - to move it stightly down
 }
 
 .mobile-menu {
@@ -810,6 +814,10 @@ section#open-source > ul,#community > ul {
 }
 
 @media(max-width: 1080px) {
+  body > header {
+    overflow: initial;
+  }
+
   #team ul {
     width: 675px;
     height: 100%;
@@ -1007,6 +1015,10 @@ section#open-source > ul,#community > ul {
   .menu-title {
     top: 18px;
     font-size: 32px;
+  }
+
+  #team ul li.empty{
+    display: none;
   }
 }
 
