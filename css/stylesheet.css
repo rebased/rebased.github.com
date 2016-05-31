@@ -758,17 +758,8 @@ section#contact > figure {
   margin: auto;
 }
 
-#contact figcaption > div > section:first-of-type,#contact figcaption > div >section:last-of-type {
-  width: 200px;
-  display: inline-block;
-}
-
-#contact figcaption > section:first-of-type {
-  left: 640px;
-}
-
-#contact figcaption > div > section:last-of-type {
-  padding-left: 20px;
+#contact p {
+  margin: 1em auto;
 }
 
 #title,#contact figcaption address {
@@ -778,20 +769,6 @@ section#contact > figure {
 
 #title,#contact figcaption header,#title {
   letter-spacing: -1px;
-}
-
-#contact figcaption section:first-of-type > header {
-  margin-bottom: 24px;
-  margin-top: -3px;
-}
-
-#contact figcaption section:last-of-type > header {
-  margin-bottom: 58px;
-  margin-top: -3px;
-}
-
-#contact figcaption section:first-of-type > address {
-  margin-top: 12px;
 }
 
 #title {
