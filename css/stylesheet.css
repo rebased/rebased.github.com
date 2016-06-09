@@ -267,6 +267,12 @@ section#intro > section > p:first-of-type:after {
   right: -90px;
 }
 
+#team footer a {
+  width: 51px;
+  height: 50px;
+  display: inline-block;
+}
+
 #team figure {
   position: relative;
   cursor: pointer;
