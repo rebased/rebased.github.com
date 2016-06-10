@@ -267,6 +267,12 @@ section#intro > section > p:first-of-type:after {
   right: -90px;
 }
 
+#team footer a {
+  width: 51px;
+  height: 50px;
+  display: inline-block;
+}
+
 #team figure {
   position: relative;
   cursor: pointer;
@@ -279,13 +285,7 @@ section#intro > section > p:first-of-type:after {
 
 #team figure:hover img,#team figure:hover header,#team figure:hover p {
   transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -o-transition: all .2s;
   transition-delay: .1s;
-  -webkit-transition-delay: .1s;
-  -moz-transition-delay: .1s;
-  -o-transition-delay: .1s;
 }
 
 #team figure:hover img {
@@ -802,6 +802,10 @@ section#open-source > ul,#community > ul {
     font-size: 44px;
     font-weight: 800;
     top: 0;
+  }
+
+  #team figure:hover header {
+    margin-top: 100px; // prevents transition all to make a margin transition
   }
 
   #team figure p {
