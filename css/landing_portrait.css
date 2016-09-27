@@ -373,6 +373,8 @@ aside .disclaimer {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1080px;
+  margin: auto;
 }
 
 #tools li {
