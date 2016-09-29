@@ -439,7 +439,7 @@ footer .disclaimer {
   display: none;
 }
 
-@media only screen and (min-device-width: 768px) {
+@media only screen and (min-width: 768px) {
   #header-section {
     padding-left: 3em;
     padding-bottom: 2em;
@@ -688,7 +688,7 @@ footer .disclaimer {
   }
 }
 
-@media only screen and (min-device-width: 992px) {
+@media only screen and (min-width: 992px) {
   #header-section {
     padding-left: 6em;
     padding-top: 0;
@@ -890,7 +890,7 @@ footer .disclaimer {
   }
 }
 
-@media only screen and (min-device-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   #header-section {
     padding-left: 10em;
   }
