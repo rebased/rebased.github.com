@@ -784,7 +784,7 @@ footer .disclaimer {
     text-align: left;
     padding: 0px;
     position: relative;
-    min-height: 140px;
+    height: 140px;
     float: left;
     width: calc(50% - 2em);
     display: table;
