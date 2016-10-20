@@ -68,6 +68,11 @@ ul {
   padding-bottom: 160px;
 }
 
+#header-section header h3 a {
+  color: #FFF;
+  text-decoration: none;
+}
+
 header h1 {
   font-family: "Montserrat";
   font-size: 11.5em;
