@@ -999,3 +999,37 @@ footer .disclaimer {
     width: 60%;
   }
 }
+
+/* GRADIENT */
+
+#gradient > footer {
+  background-color:  #3917A0;
+}
+
+#gradient #header-section {
+  background: linear-gradient(45deg, #B029F1, #34179D, #030E73);
+}
+
+#gradient #intro {
+  background-color: #FFF;
+}
+
+#gradient #intro > h1 {
+  color: #521CB3;
+}
+
+#gradient #reasons {
+  background-color: #DED1F4;
+}
+
+#gradient #recommendations {
+  background-color: #EEE4FF;
+}
+
+#gradient .carousel-control {
+  color: #4C2A9A;
+}
+
+#gradient #tools {
+  background-color: #EEE4FF;
+}
