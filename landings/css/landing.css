@@ -22,11 +22,6 @@ ul {
   background-size: cover;
 }
 
-#crystals #main-footer {
-  color: #FFF;
-  background-color: #0A1639;
-}
-
 #crystals #intro {
   background-color: #ebf0f9;
   background: url("../images/landing/light_bg_crystals_720px.png") no-repeat right;
@@ -54,6 +49,43 @@ ul {
 
 #crystals #tools {
   background-color: #F0F5FC;
+}
+
+#crystals #main-footer {
+  background-color: #0A1639;
+}
+
+#gradient #header-section {
+  background: linear-gradient(45deg, #B029F1, #491AAD, #030E73);
+}
+
+#gradient #intro .claim {
+  color: #521CB3;
+}
+
+#gradient #reasons {
+  background: #DED1F4;
+}
+
+#gradient #recommendations {
+  background: #EEE4FF;
+}
+
+#gradient #recommendations .carousel-control {
+  color: #4C2BA4;
+}
+
+#gradient #recommendations .carousel .opinion:before,
+#gradient #recommendations .carousel .opinion:after {
+  color: #CFC4E9;
+}
+
+#gradient #tools {
+  background: #EEE4FF;
+}
+
+#gradient #main-footer {
+  background: #3917A0;
 }
 
 .main-page > section, #main-footer {
@@ -352,6 +384,10 @@ ul {
   flex: 1 50%;
   margin: 1rem 0;
   text-align: center;
+}
+
+#main-footer {
+  color: #FFF;
 }
 
 #main-footer .form-footer-large-desktop {
