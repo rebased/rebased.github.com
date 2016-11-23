@@ -224,7 +224,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 2rem calc((100vw - 17.5rem)/2);
+  max-width: 17.5rem;
+  margin: 2rem auto;
 }
 
 #reasons .reasons-list li {
@@ -362,7 +363,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 calc((100vw - 20rem)/2);
+  max-width: 20rem;
+  margin: 0 auto;
 }
 
 #core-technologies .technologies-list li {
@@ -380,7 +382,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0 calc((100vw - 20rem)/2);
+  max-width: 20rem;
+  margin: 0 auto;
 }
 
 #tools .tools-list li {
@@ -429,7 +432,7 @@ ul {
   }
 
   #reasons .reasons-list {
-    margin: 2rem calc((100vw - 40rem)/2);
+    max-width: 40rem;
   }
 
   #reasons .reasons-list li {
@@ -469,7 +472,8 @@ ul {
 
   #core-technologies .technologies-list,
   #tools .tools-list {
-    margin: 0 calc((100vw - 36rem)/2);
+    max-width: 36rem;
+    margin: 0 auto;
   }
 
   #core-technologies .technologies-list li,
@@ -550,6 +554,7 @@ ul {
 
   #reasons .reasons-list {
     margin: 2rem 0;
+    max-width: 100%;
   }
 
   #reasons .reasons-list li {
@@ -574,7 +579,8 @@ ul {
 
   #core-technologies .technologies-list,
   #tools .tools-list {
-    margin: 0 calc((100vw - 50rem)/2);
+    max-width: 50rem;
+    margin: 0 auto;
   }
 }
 
@@ -599,7 +605,7 @@ ul {
 
   #core-technologies .technologies-list,
   #tools .tools-list {
-    margin: 0;
+    max-width: 100%;
   }
 
   #core-technologies .technologies-list li {
