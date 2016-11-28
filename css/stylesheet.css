@@ -663,12 +663,6 @@ section#contact > .map {
   display: inline-block;
 }
 
-section#contact > .map-lower {
-  display: none;
-  width: 515px;
-  margin: auto;
-}
-
 section#contact > figure {
   padding-top: 30px;
   width: 515px;
