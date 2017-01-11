@@ -1,10 +1,17 @@
 var rebased = {
 
   init: function() {
-    $('.menu-controls').on('click', function() {
-      event.stopPropagation();
-      $('.main-menu').toggleClass('active');
-    })
+    $("#hamburger").click(function() {
+      $("#menu").slideToggle("slow", function() {
+        $("#hamburger").toggleClass("expanded");
+      });
+    });
+
+    $("#hamburger.expanded").click(function() {
+      $("#menu").slideToggle( "slow", function() {
+      });
+    });
+
     $("#team").on("click", ".toggle-button", rebased.hideOrShowTeam);
     $("#team").on("click", ".divider-button", rebased.hideOrShowTeam);
     $(window).on('scroll', rebased.scrollSite);
