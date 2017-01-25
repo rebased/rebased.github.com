@@ -931,6 +931,10 @@ aside.contact-form-wrapper > p.disclaimer {
     justify-content: space-between;
   }
 
+  body > header > h1.company-name {
+    flex-grow: 3;
+  }
+
   body > header > h1.company-name a {
     background-size: contain;
     width: 9rem;
@@ -943,8 +947,7 @@ aside.contact-form-wrapper > p.disclaimer {
 
   nav.menu {
     max-width: initial;
-    flex-basis: 70%;
-    flex-grow: initial;
+    flex-grow: 7;
   }
 
   nav.menu .menu-items {
