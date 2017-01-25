@@ -787,7 +787,8 @@ aside.contact-form-wrapper > p.disclaimer {
   #team ul {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 2rem calc((100vw - 52.5rem)/2);
+    margin: 2rem auto;
+    justify-content: center;
   }
 
   #team li {
@@ -817,7 +818,7 @@ aside.contact-form-wrapper > p.disclaimer {
   #projects > ul {
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 calc((100vw - 47rem)/2)
+    margin: 0 calc((100vw - 47rem)/2);
   }
 
   #projects > ul > li {
