@@ -65,19 +65,27 @@ main > section > header:after {
   bottom: -3rem;
 }
 
+body > header {
+  display: flex;
+}
+
 body > header > h1.company-name {
   background-color: #fff;
   height: 5rem;
+  flex-grow: 1;
 }
 
 body > header > h1.company-name a {
-  background: url(../images/rebased-logo-full.png) no-repeat;
+  background: url(../images/rebased-logo-full.png) no-repeat 1.25rem;
+  background-size: auto 2rem;
   display: block;
-  position: relative;
   text-indent: -9999px;
-  height: 2rem;
-  top: 1.5rem;
-  left: 1.5rem;
+  height: 5rem;
+}
+
+nav.menu {
+  flex-grow: 1;
+  max-width: 5rem;
 }
 
 nav.menu > button {
@@ -923,7 +931,6 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   body > header > h1.company-name {
-    flex-grow: 0.125;
   }
 
   body > header > h1.company-name a {
@@ -935,9 +942,14 @@ aside.contact-form-wrapper > p.disclaimer {
     display: none;
   }
 
+  nav.menu {
+  }
+
   nav.menu .menu-items {
     display: flex;
     background-color: #fff;
+    width: initial;
+    flex-grow: 1;
   }
 
   nav.menu .menu-items li,
