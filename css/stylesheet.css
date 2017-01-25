@@ -680,6 +680,35 @@ aside.contact-form-wrapper > p.disclaimer {
   padding: 1.5rem 0 0;
 }
 
+#jobs {
+  background: url(../images/header-jobs-mobile.png) no-repeat right 5rem;
+}
+
+#jobs header {
+  background-color: #fff;
+}
+
+#jobs #jobs-intro {
+  color: #fff;
+  font-family: "Montserrat";
+  padding: 0 0 2rem;
+  text-align: center;
+}
+
+#jobs #jobs-intro h1 {
+  padding: 2rem 1rem 0.5rem;
+  font-size: 2rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+#jobs #jobs-intro h2 {
+  font-size: 1.25rem;
+  line-height: 1.1;
+  padding: 0 3rem 9rem;
+  font-weight: 400;
+}
+
 #jobs .job-offer > p,
 #jobs .job-offer li,
 #jobs .job-offer > footer {
@@ -919,6 +948,23 @@ aside.contact-form-wrapper > p.disclaimer {
     text-align: center;
     padding: 1.75rem 0;
   }
+
+  #jobs {
+    background: url(../images/header-jobs-desktop.png) no-repeat 0 5rem;
+    background-size: contain;
+  }
+
+  #jobs #jobs-intro h1 {
+    padding: 0.5rem 0 0.5rem;
+    font-size: 2rem;
+  }
+
+  #jobs #jobs-intro h2 {
+    width: 20rem;
+    margin:auto;
+    font-size: 1.25rem;
+    padding-bottom: 3rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1106,5 +1152,13 @@ aside.contact-form-wrapper > p.disclaimer {
   #open-source ul.contributors > li {
     display: table-cell;
     padding: 0 0.5rem;
+  }
+
+  #jobs #jobs-intro {
+    padding-bottom: 5.5rem;
+  }
+
+  #jobs .job-offer {
+    padding-top: 2rem;
   }
 }
