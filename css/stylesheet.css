@@ -928,14 +928,13 @@ aside.contact-form-wrapper > p.disclaimer {
 
   body > header {
     display: flex;
-  }
-
-  body > header > h1.company-name {
+    justify-content: space-between;
   }
 
   body > header > h1.company-name a {
     background-size: contain;
     width: 9rem;
+    background-position: center;
   }
 
   body > header nav button {
@@ -943,13 +942,15 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   nav.menu {
+    max-width: initial;
+    flex-basis: 70%;
+    flex-grow: initial;
   }
 
   nav.menu .menu-items {
+    position: initial;
     display: flex;
     background-color: #fff;
-    width: initial;
-    flex-grow: 1;
   }
 
   nav.menu .menu-items li,
@@ -957,6 +958,8 @@ aside.contact-form-wrapper > p.disclaimer {
     padding: 0;
     margin: 0;
     line-height: 5rem;
+    flex-grow: 1;
+    text-align: center;
   }
 
   nav.menu .menu-items li a,
@@ -964,7 +967,7 @@ aside.contact-form-wrapper > p.disclaimer {
     color: #000;
     font-weight: normal;
     font-size: 1rem;
-    margin: 0 0.75rem;
+    margin: 0;
   }
 
   body > header,
