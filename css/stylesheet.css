@@ -119,6 +119,8 @@ nav.menu .menu-items {
   width: 100%;
   background-color: #1E1E1E;
   position: absolute;
+  left: 0;
+  top: 5rem;
 }
 
 nav.menu .menu-items li,
