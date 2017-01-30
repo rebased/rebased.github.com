@@ -67,6 +67,10 @@ main > section > header:after {
 
 body > header {
   display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3333;
 }
 
 body > header > h1.company-name {
@@ -92,7 +96,7 @@ nav.menu > button {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.6rem;
   font-size: 2rem;
   border: 0;
   background-color: #fff;
@@ -196,7 +200,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #intro {
-  padding-top: 2.5rem;
+  padding-top: 7.5rem;
   padding-bottom: 3rem;
 }
 
@@ -696,7 +700,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #jobs #jobs-intro h1 {
-  padding: 2rem 1rem 0.5rem;
+  padding: 7rem 1rem 0.5rem;
   font-size: 2rem;
   line-height: 1.1;
   text-transform: uppercase;
@@ -758,7 +762,7 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   #intro {
-    padding-top: 1rem;
+    padding-top: 6rem;
     display: flex;
     overflow: visible
   }
@@ -955,7 +959,7 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   #jobs #jobs-intro h1 {
-    padding: 0.5rem 0 0.5rem;
+    padding: 5.5rem 0 0.5rem;
     font-size: 2rem;
   }
 
