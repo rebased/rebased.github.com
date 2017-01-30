@@ -228,6 +228,7 @@ aside.contact-form-wrapper > p.disclaimer {
   font-size: 1.5rem;
   font-weight: 100;
   color: #fff;
+  width: 16rem;
 }
 
 #intro aside.contact-form-wrapper > p.prompt:after {
