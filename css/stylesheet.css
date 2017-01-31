@@ -837,17 +837,17 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   #team li {
-    margin: 3rem 2rem;
-    width: 21rem;
+    margin: 3rem 1.5rem;
+    width: 20rem;
   }
 
   #team figure > img {
-    width: 21rem;
+    width: 20rem;
   }
 
   #team figcaption header {
     font-size: 3.5rem;
-    margin: 17rem 0 -10rem;
+    margin: 15rem 0 -10rem;
   }
 
   #team figure:hover header {
