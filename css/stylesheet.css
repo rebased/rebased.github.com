@@ -1160,6 +1160,18 @@ aside.contact-form-wrapper > p.disclaimer {
     padding: 0.5rem;
   }
 
+  #contact .contact-info-wrapper {
+    display: flex;
+  }
+
+  #contact .map {
+    flex-basis: 100%;
+  }
+
+  #contact .address-details-wrapper {
+    flex-direction: column;
+  }
+
   #jobs #jobs-intro {
     padding-bottom: 5.5rem;
   }
