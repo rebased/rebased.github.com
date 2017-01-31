@@ -986,7 +986,9 @@ aside.contact-form-wrapper > p.disclaimer {
 
   body > header {
     display: flex;
-    justify-content: space-between;
+    padding: 0 calc((100vw - 52rem)/2);
+    width: 52rem;
+    background-color: #fff;
   }
 
   body > header > h1.company-name {
@@ -1031,7 +1033,6 @@ aside.contact-form-wrapper > p.disclaimer {
     margin: 0;
   }
 
-  body > header,
   main > section {
     padding: 0;
     width: 52rem;
