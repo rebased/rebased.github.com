@@ -525,18 +525,19 @@ aside.contact-form-wrapper > p.disclaimer {
   line-height: 1.25rem;
 }
 
-#open-source ul.contributors {
+#open-source .contributors {
   padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#open-source ul.contributors > li {
-  margin: 0 0.3rem;
+#open-source .contributors > figure {
+  margin: 0.3rem;
   padding: 0;
-  display: inline-block;
-  position: relative;
 }
 
-#open-source ul.contributors li > a {
+#open-source .contributors figure > a {
   position: absolute;
   background-color: rgba(25,107,246,0.8);
   opacity: 0;
@@ -545,12 +546,12 @@ aside.contact-form-wrapper > p.disclaimer {
   margin: 0;
 }
 
-#open-source ul.contributors li > a:hover {
+#open-source .contributors figure > a:hover {
   opacity: 1;
   background-color: rgba(25,107,246,0.8);
 }
 
-#open-source ul.contributors li > a > img {
+#open-source .contributors figure > a > img {
   padding: 1.5rem;
   background-color: rgba(25,107,246,0.8);
   position: absolute;
@@ -559,7 +560,7 @@ aside.contact-form-wrapper > p.disclaimer {
   height: 3rem;
 }
 
-#open-source ul.contributors > li > img {
+#open-source .contributors figure > img {
   width: 6rem;
   height: 6rem;
 }
@@ -1150,13 +1151,13 @@ aside.contact-form-wrapper > p.disclaimer {
     line-height: 1.5;
   }
 
-  #open-source ul.contributors {
+  #open-source .contributors {
     padding-left: 2rem;
   }
 
-  #open-source ul.contributors > li {
+  #open-source .contributors > figure {
     display: table-cell;
-    padding: 0 0.5rem;
+    padding: 0.5rem;
   }
 
   #jobs #jobs-intro {
