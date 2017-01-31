@@ -462,7 +462,7 @@ aside.contact-form-wrapper > p.disclaimer {
   margin: 1rem;
 }
 
-#projects ul {
+#projects .projects-portfolio {
   padding-top: 2rem;
   margin: auto;
   display: flex;
@@ -470,25 +470,25 @@ aside.contact-form-wrapper > p.disclaimer {
   align-items: center;
 }
 
-#projects li {
+#projects .projects-portfolio li {
   color: #474747;
   font-weight: 100;
   line-height: 150%;
   padding-top: 1.5rem;
 }
 
-#projects figure {
+#projects .projects-portfolio figure {
   display: table;
 }
 
-#projects figure > figcaption {
+#projects .projects-portfolio figure > figcaption {
   text-align: center;
   width: 100%;
   display: table-caption;
   caption-side: bottom;
 }
 
-#projects figure > img {
+#projects .projects-portfolio figure > img {
   margin: 1.25rem;
 }
 
@@ -859,13 +859,13 @@ aside.contact-form-wrapper > p.disclaimer {
     font-size: 1.1rem;
   }
 
-  #projects > ul {
+  #projects .projects-portfolio {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0 calc((100vw - 47rem)/2);
   }
 
-  #projects > ul > li {
+  #projects .projects-portfolio li {
     padding: 2rem;
   }
 
@@ -1097,17 +1097,17 @@ aside.contact-form-wrapper > p.disclaimer {
     font-size: 0.75rem;
   }
 
-  #projects > ul {
+  #projects .projects-portfolio {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 0;
   }
 
-  #projects > ul > li {
+  #projects .projects-portfolio li {
     padding: 1rem;
   }
 
-  #projects li:nth-of-type(3n-1) {
+  #projects .projects-portfolio li:nth-of-type(3n-1) {
     border-right-width: 0.01rem;
     border-left-width: 0.01rem;
     border-color: #d6d6d6;
@@ -1115,17 +1115,17 @@ aside.contact-form-wrapper > p.disclaimer {
     align-self: flex-start;
   }
 
-  #projects li:nth-of-type(-n+3) {
+  #projects .projects-portfolio li:nth-of-type(-n+3) {
     border-bottom: 0.01rem #d6d6d6 solid;
     align-self: flex-end;
   }
 
-  #projects > ul > li img {
+  #projects .projects-portfolio li img {
     width: 12.25rem;
     height: auto;
   }
 
-  #projects > ul > li p {
+  #projects .projects-portfolio li p {
     font-size: 0.9rem;
   }
 
