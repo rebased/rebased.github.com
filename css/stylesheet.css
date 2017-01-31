@@ -956,12 +956,12 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   #jobs {
-    background: url(../images/header-jobs-desktop.png) no-repeat 0 5rem;
-    background-size: contain;
+    background: url(../images/header-jobs-desktop.png) no-repeat -25vw 5rem;
+    background-size: 150vw;
   }
 
   #jobs #jobs-intro h1 {
-    padding: 5.5rem 0 0.5rem;
+    padding: 7.5rem 0 0.5rem;
     font-size: 2rem;
   }
 
@@ -970,6 +970,10 @@ aside.contact-form-wrapper > p.disclaimer {
     margin:auto;
     font-size: 1.25rem;
     padding-bottom: 3rem;
+  }
+
+  #jobs .job-offer {
+    padding-top: 7rem;
   }
 }
 
@@ -1172,11 +1176,26 @@ aside.contact-form-wrapper > p.disclaimer {
     flex-direction: column;
   }
 
+  #jobs {
+    background: url(../images/header-jobs-desktop.png) no-repeat 0 5rem;
+    background-size: 120vw;
+  }
+
   #jobs #jobs-intro {
     padding-bottom: 5.5rem;
   }
 
+  #jobs #jobs-intro h1 {
+    padding-top: 7.5rem;
+    font-size: 3rem;
+  }
+
+  #jobs #jobs-intro h2 {
+    font-size: 1.75rem;
+    width: initial;
+  }
+
   #jobs .job-offer {
-    padding-top: 2rem;
+    padding-top: calc(7vw);
   }
 }
