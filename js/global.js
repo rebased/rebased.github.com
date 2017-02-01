@@ -15,10 +15,13 @@ var rebased = {
     });
 
     $(".menu-items li a").click(function() {
-      $("#menu").slideToggle( "slow", function() {
-        $("#hamburger").toggleClass("expanded");
-        $("body").toggleClass("noscroll");
-      });
+      $("body").toggleClass("noscroll");
+
+      if($(window).width() < 992) {
+        $("#menu").slideToggle( "slow", function() {
+          $("#hamburger").toggleClass("expanded");
+        });
+      };
 
       var section = $(this).attr('href')
       $("html,body").animate({ scrollTop: $(section).offset().top -85 }, 'slow');
