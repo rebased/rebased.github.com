@@ -535,34 +535,32 @@ aside.contact-form-wrapper > p.disclaimer {
 #open-source .contributors > figure {
   margin: 0.3rem;
   padding: 0;
-}
-
-#open-source .contributors figure > a {
-  position: absolute;
-  background-color: rgba(25,107,246,0.8);
-  opacity: 0;
-  height: 6rem;
-  width: auto;
-  margin: 0;
-}
-
-#open-source .contributors figure > a:hover {
-  opacity: 1;
-  background-color: rgba(25,107,246,0.8);
-}
-
-#open-source .contributors figure > a > img {
-  padding: 1.5rem;
-  background-color: rgba(25,107,246,0.8);
-  position: absolute;
-  top: -6.125rem;
-  width: 3rem;
-  height: 3rem;
+  position: relative;
 }
 
 #open-source .contributors figure > img {
   width: 6rem;
   height: 6rem;
+}
+
+#open-source .contributors figure > a {
+  position: absolute;
+  opacity: 0;
+  height: 6rem;
+  width: 6rem;
+  margin: 0;
+  top: 0;
+}
+
+#open-source .contributors figure > a:hover {
+  opacity: 1;
+}
+
+#open-source .contributors figure > a > img {
+  padding: 1.5rem;
+  background-color: rgba(25,107,246,0.6);
+  width: 3rem;
+  height: 3rem;
 }
 
 #community > header {
@@ -1163,6 +1161,10 @@ aside.contact-form-wrapper > p.disclaimer {
   #open-source .contributors > figure {
     display: table-cell;
     padding: 0.5rem;
+  }
+
+  #open-source .contributors > figure a {
+    top: 0.5rem;
   }
 
   #contact .contact-info-wrapper {
