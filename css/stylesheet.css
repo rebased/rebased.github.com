@@ -1225,3 +1225,23 @@ aside.contact-form-wrapper > p.disclaimer {
     padding-top: calc(7vw);
   }
 }
+
+@media (min-width: 1550px) {
+  body {
+    background: url(../images/header.png) no-repeat;
+    background-size: contain;
+    background-position: 0 -3vw;
+  }
+}
+
+@media (min-width: 1750px) {
+  body {
+    background: url(../images/header.png) no-repeat;
+    background-size: contain;
+    background-position: 0 -10vw;
+  }
+
+  #intro aside.contact-form-wrapper > p.disclaimer {
+    color: #fff;
+  }
+}
