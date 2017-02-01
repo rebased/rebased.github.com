@@ -24,7 +24,9 @@ var rebased = {
       };
 
       var section = $(this).attr('href')
-      $("html,body").animate({ scrollTop: $(section).offset().top -85 }, 'slow');
+      $("html,body").animate({
+        scrollTop: $(section).offset().top -85 },
+        'slow');
     });
 
     $("#team").on("click", ".toggle-button", rebased.hideOrShowTeam);
@@ -48,8 +50,8 @@ var rebased = {
     rebased.toggleExtendedTeamElements(wholeSection);
     if (sectionToToggle.attr('class') === "to-toggle") {
       $('html, body').animate({
-        scrollTop: 630
-      }, 900);
+        scrollTop: wholeSection.offset().top -85
+      }, 'slow');
     };
     return false;
   }

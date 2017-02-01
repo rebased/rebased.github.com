@@ -372,7 +372,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #team figcaption footer {
-  margin-top: 4.7rem;
+  margin-top: 3.5rem;
 }
 
 #team figcaption > p {
@@ -905,7 +905,8 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #contact > header {
     font-size: 3.2rem;
-    padding: 0 1.25rem;
+    width: 42rem;
+    margin: 0 auto 2.25rem;
   }
 
   #contact .map img {
@@ -1188,6 +1189,7 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #contact > header {
     font-size: 3rem;
+    width: initial;
   }
 
   #contact .contact-info-wrapper {
