@@ -1023,12 +1023,20 @@ aside.contact-form-wrapper > p.disclaimer {
     text-align: center;
   }
 
+  nav.menu .menu-items li:hover {
+    background-color: #186bf5;
+  }
+
   nav.menu .menu-items li a,
   nav.menu .menu-items li a:hover {
     color: #000;
     font-weight: normal;
     font-size: 1rem;
     margin: 0;
+  }
+
+  nav.menu .menu-items li a:hover {
+    color: #fff;
   }
 
   main > section {
