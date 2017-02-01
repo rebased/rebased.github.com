@@ -7,6 +7,10 @@ body {
   background-position: 0 5rem;
 }
 
+body .noscroll {
+  overflow-y: hidden;
+}
+
 ul {
   list-style: none;
 }
