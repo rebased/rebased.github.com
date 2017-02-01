@@ -1109,6 +1109,9 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #projects .projects-portfolio li {
     padding: 1rem;
+    flex-grow: 1;
+    min-height: 17.5rem;
+    align-self: flex-start;
   }
 
   #projects .projects-portfolio li:nth-of-type(3n-1) {
@@ -1116,7 +1119,6 @@ aside.contact-form-wrapper > p.disclaimer {
     border-left-width: 0.01rem;
     border-color: #d6d6d6;
     border-style: solid;
-    align-self: flex-start;
   }
 
   #projects .projects-portfolio li:nth-of-type(-n+3) {
