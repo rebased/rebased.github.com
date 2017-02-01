@@ -756,6 +756,10 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 @media (min-width: 768px) {
+  body {
+    background-position: -8rem 1rem;
+  }
+
   main > section > header {
     font-size: 3rem;
   }
@@ -801,7 +805,7 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #pitch > p {
     font-size: 1.2rem;
-    margin: 0 1.75rem;
+    margin: 0;
     letter-spacing: -0.01rem;
   }
 
@@ -839,7 +843,7 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   #team li {
-    margin: 3rem 1.5rem;
+    margin: 3rem 1.25rem;
     width: 20rem;
   }
 
@@ -1180,6 +1184,10 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #open-source .contributors > figure a {
     top: 0.5rem;
+  }
+
+  #contact > header {
+    font-size: 3rem;
   }
 
   #contact .contact-info-wrapper {
