@@ -1166,6 +1166,7 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #open-source .contributors {
     padding-left: 2rem;
+    flex-wrap: nowrap;
   }
 
   #open-source .contributors > figure {
