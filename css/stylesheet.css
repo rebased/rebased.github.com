@@ -31,13 +31,11 @@ body > footer {
   width: 100%;
 }
 
-body > footer p.mobile {
+body > footer p {
   text-align: center;
+  margin: 0 auto;
+  width: 12rem;
   padding: 1.25rem 0;
-}
-
-body > footer p.tablet {
-  display: none;
 }
 
 main {
@@ -960,13 +958,8 @@ aside.contact-form-wrapper > p.disclaimer {
     margin: auto;
   }
 
-  body > footer p.mobile {
-    display: none;
-  }
-
-  body > footer p.tablet {
-    display: block;
-    text-align: center;
+  body > footer p {
+    width: auto;
     padding: 1.75rem 0;
   }
 
