@@ -63,7 +63,7 @@ main > section > header:after {
   position: absolute;
   left: 50%;
   margin-left: -3rem;
-  background-color: #186bf5;
+  background-color: #194fd6;
   bottom: -3rem;
 }
 
@@ -139,7 +139,7 @@ nav.menu .menu-items li:hover {
 }
 
 nav.menu .menu-items li:hover {
-  background-color: #1650F3;
+  background-color: #194fd6;
 }
 
 nav.menu .menu-items a,
@@ -168,8 +168,8 @@ aside.contact-form-wrapper > form.contact-form input {
 }
 
 aside.contact-form-wrapper > form.contact-form button {
-  background-color: #24EA71;
-  border: 0.01rem solid #24EA71;
+  background-color: #00ea84;
+  border: 0.01rem solid #00ea84;
   border-radius: 2rem;
   color: #fff;
   font-size: 1.25rem;
@@ -641,7 +641,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #contact .address-details .email-address > a {
-  color: #1650F3;
+  color: #194fd6;
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -742,7 +742,7 @@ aside.contact-form-wrapper > p.disclaimer {
 
 #jobs .job-offer li:before {
   content: "• ";
-  color: #405ABA;
+  color: #194fd6;
   font-weight: 700;
 }
 
@@ -820,7 +820,7 @@ aside.contact-form-wrapper > p.disclaimer {
     display: inline-block;
     font-size: 7.5rem;
     font-family: 'Montserrat', sans-serif;
-    color: #2888f8;
+    color: #194fd6;
     position: relative;
     top: 2rem;
   }
