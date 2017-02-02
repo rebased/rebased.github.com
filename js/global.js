@@ -1,16 +1,36 @@
 var rebased = {
 
   init: function() {
-    $('.menu-controls').on('click', function() {
-      event.stopPropagation();
-      $('.main-menu').toggleClass('active');
-    })
+    $("#hamburger").click(function() {
+      $("#menu").slideToggle("slow", function() {
+        $("#hamburger").toggleClass("expanded");
+        $("body").toggleClass("noscroll");
+      });
+    });
+
+    $("#hamburger.expanded").click(function() {
+      $("#menu").slideToggle( "slow", function() {
+        $("body").toggleClass("noscroll");
+      });
+    });
+
+    $(".menu-items li a").click(function() {
+      $("body").toggleClass("noscroll");
+
+      if($(window).width() < 992) {
+        $("#menu").slideToggle( "slow", function() {
+          $("#hamburger").toggleClass("expanded");
+        });
+      };
+
+      var section = $(this).attr('href')
+      $("html,body").animate({
+        scrollTop: $(section).offset().top -85 },
+        'slow');
+    });
+
     $("#team").on("click", ".toggle-button", rebased.hideOrShowTeam);
     $("#team").on("click", ".divider-button", rebased.hideOrShowTeam);
-    $(window).on('scroll', rebased.scrollSite);
-    if($('#main_page').length === 1) {
-      $(window).on('scroll', rebased.scrollSpy);
-    }
   },
 
   toggleExtendedTeamElements: function(wholeSection) {
@@ -30,29 +50,10 @@ var rebased = {
     rebased.toggleExtendedTeamElements(wholeSection);
     if (sectionToToggle.attr('class') === "to-toggle") {
       $('html, body').animate({
-        scrollTop: 630
-      }, 900);
+        scrollTop: wholeSection.offset().top -85
+      }, 'slow');
     };
     return false;
-  },
-
-  scrollSite: function() {
-    var header = $('body').children().first();
-    if (window.pageYOffset > 20) {
-      header[0].className = "visible";
-    } else {
-      header[0].className = "";
-    };
-  },
-
-  scrollSpy: function() {
-    var position = window.pageYOffset;
-    $('.active-section').removeClass('active-section');
-    $('#main_page > section').each(function(index, section) {
-      if( section.offsetTop <= position && position <= ( section.offsetHeight + section.offsetTop) ) {
-        $('a[href="#' + section.id+ '"]').next().addClass('active-section');
-      }
-    })
   }
 }
 

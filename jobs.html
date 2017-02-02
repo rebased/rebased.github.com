@@ -3,79 +3,90 @@
 <head>
   <title>Rebased.pl - bullshit-free programmers</title>
   <meta charset='utf-8' />
-  <meta name="viewport" content="user-scalable=0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:100,400">
   <link rel="shortcut icon" href="/favicon.ico" />
 </head>
-<body>
-<header>
-  <div class="header-main">
-    <h1 class="left"><a href="index.html">Rebased</a></h1>
-    <nav class="right">
-      <div class="menu-controls">
-        <div class="menu-title">Menu</div>
-        <div class="menu-button"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
-      </div>
-      <ul class='main-menu'>
-        <li><a href="index.html#team">Team</a><div></div></li>
-        <li><a href="index.html#projects">Projects</a><div></div></li>
-        <li><a href="index.html#open-source">Open Source</a><div></div></li>
-        <li><a href="index.html#community">Community</a><div></div></li>
-        <li><a href="index.html#contact">Contact</a><div></div></li>
-        <li><a href="jobs.html">Jobs</a><div class="active-section"></div></li>
-        <li><a href="http://blog.rebased.pl/" target="_blank">Blog</a><div></div></li>
+<body id="jobs">
+  <header>
+    <h1 class="company-name"><a href="index.html">Rebased</a></h1>
+    <nav class="menu">
+      <button class="hamburger-button" id="hamburger">&#9776;</button>
+      <ul class="menu-items" id="menu">
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="http://blog.rebased.pl/" target="_blank">Blog</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#community">Community</a></li>
+        <li><a href="index.html#open-source">Open Source</a></li>
+        <li><a href="index.html#team">Team</a></li>
       </ul>
     </nav>
-  </div>
-</header>
-<main>
-<section id="intro" class="text-center">
-  <header class="text-center">
-    <p id="header">Bullshit-free Programmers</p>
-    <p id="subheader">We code. And we're good at it.</p>
   </header>
-</section>
-<section class="job-offer">
-  <p>
-    Rebased to kilkunastu świetnych programistów i dwóch specjalistów od biznesu. Pracujemy dla klientów z USA, Wielkiej Brytanii, Niemiec, Francji, Szwecji, Holandii i nie tylko.
-    Prawdopodobnie nas znacie z aktywności w społeczności programistycznej (open-source, konferencje, WRUG, Rails Girls i inne warsztaty) więc nie ma co się rozwodzić nad opowiadaniem o naszej kulturze pracy, stylu i podejściu do jakości kodu.
-    Potrzebujemy zaawansowanego Programisty/Programistki Ruby on Rails.
-  </p>
-  <h2>
-    Oczekiwania:
-  </h2>
-  <p>
-    znajomość PostgreSQL i/lub MySQL oraz Redis (mile widziane MongoDB),
-    bardzo dobra (poparta doświadczeniem zawodowym i/lub hobbystycznymi projektami) znajomość Rails,
-    ... i oczywiście Ruby oraz używanych powszechnie gemów i narzędzi,
-    (mile widziana) biegłość w technologiach frontendowych, czyli HTML5, CSS3,
-    fajnie jeśli umiesz Javascript (z jQuery), rewelacyjnie jeśli znasz jakiś framework MV* (Ember.js, Angular, Backbone),
-    kultura pisania testów, znajomość RSpec,
-    biegłość w angielskim pozwalająca swobodnie rozmawiać z anglojęzycznymi klientami,
-    ciekawość, entuzjazm, zapał do uczenia się nowych rzeczy i pisania fajnego kodu.
-  </p>
-  <h2>
-    Oferujemy:
-  </h2>
-  <ul>
-    <li>wynagrodzenie w przedziale 12-18 tys netto na fakturę VAT (w przypadku umowy o pracę/umowy zlecenie szczegóły finansowe do negocjacji),</li>
-    <li>pracę w jednym z najmocniejszych rubiowych zespołów w Polsce,</li>
-    <li>płatną pracę nad projektami open-source,</li>
-    <li>fajne biuro na warszawskim Żoliborzu (400m od Metra Marymont),</li>
-    <li>zwroty za koszty jakościowych konferencji.</li>
-  </ul>
+
+  <main>
+    <section id="jobs-intro">
+      <h1>Bullshit-free Programmers</h1>
+      <h2>We code. And we're good at it.</h2>
+    </section>
+
+    <section class="job-offer">
+      <p>
+        Rebased to kilkunastu świetnych programistów i dwóch specjalistów od biznesu. Pracujemy dla klientów z USA, Wielkiej Brytanii, Niemiec, Francji, Szwecji, Holandii i nie tylko.
+        Prawdopodobnie nas znacie z aktywności w społeczności programistycznej (open-source, konferencje, WRUG, Rails Girls i inne warsztaty) więc nie ma co się rozwodzić nad opowiadaniem o naszej kulturze pracy, stylu i podejściu do jakości kodu.
+        Potrzebujemy zaawansowanego Programisty/Programistki Ruby on Rails.
+      </p>
+      <h3>
+        Oczekiwania:
+      </h3>
+      <ul>
+        <li>znajomość PostgreSQL i/lub MySQL oraz Redis (mile widziane MongoDB),</li>
+        <li>bardzo dobra (poparta doświadczeniem zawodowym i/lub hobbystycznymi projektami) znajomość Rails,</li>
+        <li>... i oczywiście Ruby oraz używanych powszechnie gemów i narzędzi,</li>
+        <li>(mile widziana) biegłość w technologiach frontendowych, czyli HTML5, CSS3,</li>
+        <li>fajnie jeśli umiesz Javascript (z jQuery), rewelacyjnie jeśli znasz jakiś framework MV* (Ember.js, Angular, Backbone),</li>
+        <li>kultura pisania testów, znajomość RSpec,</li>
+        <li>biegłość w angielskim pozwalająca swobodnie rozmawiać z anglojęzycznymi klientami,</li>
+        <li>ciekawość, entuzjazm, zapał do uczenia się nowych rzeczy i pisania fajnego kodu.</li>
+      </ul>
+      <h3>
+        Oferujemy:
+      </h3>
+      <ul>
+        <li>wynagrodzenie w przedziale 12-18 tys netto na fakturę VAT (w przypadku umowy o pracę/umowy zlecenie szczegóły finansowe do negocjacji),</li>
+        <li>pracę w jednym z najmocniejszych rubiowych zespołów w Polsce,</li>
+        <li>płatną pracę nad projektami open-source,</li>
+        <li>fajne biuro na warszawskim Żoliborzu (400m od Metra Marymont),</li>
+        <li>zwroty za koszty jakościowych konferencji.</li>
+      </ul>
+      <footer>
+        <p>
+          Aplikacje (CV, linki do blogów/githubów/portfolio) proszę słać na adres <a href="mailto:contact@rebased.pl">contact@rebased.pl</a> z tematem "Senior Developer Ruby on Rails" oraz klauzulą "Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych dla potrzeb niezbędnych do realizacji rekrutacji zgodnie z Ustawą z dn. 29.08.97 r. o Ochronie Danych Osobowych (Dz. U. nr 133 poz. 883)." (bla bla bla)
+        </p>
+      </footer>
+      <aside class="contact-form-wrapper">
+        <p class="prompt">Want us to work with you? <strong>Contact us!</strong></p>
+        <p class="contact-options">
+          Leave your name and e-mail, and we'll write you back.<br />
+          …or just email us at <a href="mailto:contact@rebased.pl">contact@rebased.pl</a>
+        </p>
+        <form class="contact-form" id="contact-form-2">
+          <input type="text" name="fullname" placeholder="full name">
+          <input type="email" name="email" placeholder="email">
+          <button type="submit">send</button>
+        </form>
+        <p class="disclaimer">By submitting your name and email address you allow us to use it for business purposes. Don't worry, your data is safe with us, we'll use it only to contact you.</p>
+      </aside>
+    </section>
+  </main>
   <footer>
-    <p>
-      Aplikacje (CV, linki do blogów/githubów/portfolio) proszę słać na adres contact@rebased.pl z tematem "Senior Developer Ruby on Rails" oraz klauzulą "Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych dla potrzeb niezbędnych do realizacji rekrutacji zgodnie z Ustawą z dn. 29.08.97 r. o Ochronie Danych Osobowych (Dz. U. nr 133 poz. 883)." (bla bla bla)
-    </p>
+    <p class="mobile">Copyright <strong>Rebased</strong> ‘2017.<br /> All rights reserved</p>
+    <p class="tablet">Copyright <strong>Rebased</strong> ‘2017. All rights reserved</p>
   </footer>
-</section>
-</main>
-<footer>
+
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/global.js"></script>
-  <p class="text-center">Copyright <strong>Rebased</strong> 2016. All rights reserved</p>
-</footer>
 </body>
 </html>
