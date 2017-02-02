@@ -7,7 +7,7 @@ body {
   background-position: 0 5rem;
 }
 
-.noscroll {
+body.noscroll {
   overflow: hidden;
 }
 
@@ -130,6 +130,8 @@ nav.menu .menu-items {
   position: absolute;
   left: 0;
   top: 5rem;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 nav.menu .menu-items li,
@@ -768,6 +770,11 @@ aside.contact-form-wrapper > p.disclaimer {
   main > footer {
     background: url(../images/footer.png);
     background-size: cover;
+  }
+
+  nav.menu .menu-items {
+    height: initial;
+    overflow-y: auto;
   }
 
   #intro {
