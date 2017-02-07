@@ -1057,6 +1057,19 @@ aside.contact-form-wrapper > p.disclaimer {
     margin: auto;
   }
 
+  #jobs .current {
+    position: relative;
+  }
+
+  #jobs .current::after {
+    content: "";
+    border-bottom: 0.25rem solid #194fd6;
+    position: absolute;
+    left: 32%;
+    bottom: 1.25rem;
+    width: 1.5rem;
+  }
+
   #intro p#header {
     font-size: 3.75rem;
   }
