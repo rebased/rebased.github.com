@@ -57,6 +57,7 @@ $(function() {
         // clean up the form
         $form[0].reset();
         $form.children('button').html("Thanks, we'll contact you soon!");
+        $form.children('button').addClass("after-submit");
         $form.children('button').prop("disabled", true);
       },
 

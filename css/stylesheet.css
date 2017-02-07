@@ -176,6 +176,10 @@ aside.contact-form-wrapper > form.contact-form button {
   margin: 0.8rem 0;
 }
 
+aside.contact-form-wrapper > form.contact-form button.after-submit {
+  font-size: 1rem;
+}
+
 aside.contact-form-wrapper {
   font-family: "Montserrat";
   color: #000;
@@ -679,11 +683,6 @@ aside.contact-form-wrapper > p.disclaimer {
    border: 0.01rem solid #DADADA;
 }
 
-#contact aside.contact-form-wrapper > form.contact-form button,
-#jobs aside.contact-form-wrapper > form.contact-form button {
-  width: 7rem;
-}
-
 #contact aside.contact-form-wrapper > p.disclaimer,
 #jobs aside.contact-form-wrapper > p.disclaimer {
   padding: 1.5rem 0 0;
@@ -950,6 +949,9 @@ aside.contact-form-wrapper > p.disclaimer {
   #jobs aside.contact-form-wrapper > form.contact-form button {
     display: block;
     margin: auto;
+    text-align: center;
+    width: initial;
+    padding: 0.5rem 2rem;
   }
 
   #contact p.disclaimer,
