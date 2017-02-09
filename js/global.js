@@ -9,6 +9,12 @@ var rebased = {
       });
     });
 
+    $(window).resize(function() {
+      $("#hamburger").removeClass("expanded");
+      $("body").removeClass("noscroll");
+      $("#menu").removeClass("full-list").removeAttr("style");
+    });
+
     $(".menu-items li a").click(function() {
       $("body").toggleClass("noscroll");
 
