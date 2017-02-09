@@ -133,6 +133,10 @@ nav.menu .menu-items {
   overflow-y: scroll;
 }
 
+nav.menu .menu-items.full-list {
+  display: block;
+}
+
 nav.menu .menu-items li,
 nav.menu .menu-items li:hover {
   display: block;

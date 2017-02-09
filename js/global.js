@@ -5,12 +5,7 @@ var rebased = {
       $("#menu").slideToggle("slow", function() {
         $("#hamburger").toggleClass("expanded");
         $("body").toggleClass("noscroll");
-      });
-    });
-
-    $("#hamburger.expanded").click(function() {
-      $("#menu").slideToggle( "slow", function() {
-        $("body").toggleClass("noscroll");
+        $(this).toggleClass("full-list").removeAttr("style");
       });
     });
 
