@@ -73,6 +73,7 @@ body > header {
   top: 0;
   width: 100%;
   z-index: 3333;
+  background-color: #fff;
 }
 
 body > header > h1.company-name {
@@ -998,7 +999,6 @@ aside.contact-form-wrapper > p.disclaimer {
     display: flex;
     padding: 0 calc((100vw - 52rem)/2);
     width: 52rem;
-    background-color: #fff;
   }
 
   body > header > h1.company-name {
