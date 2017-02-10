@@ -5,13 +5,14 @@ var rebased = {
       $("#menu").slideToggle("slow", function() {
         $("#hamburger").toggleClass("expanded");
         $("body").toggleClass("noscroll");
+        $(this).toggleClass("full-list").removeAttr("style");
       });
     });
 
-    $("#hamburger.expanded").click(function() {
-      $("#menu").slideToggle( "slow", function() {
-        $("body").toggleClass("noscroll");
-      });
+    $(window).resize(function() {
+      $("#hamburger").removeClass("expanded");
+      $("body").removeClass("noscroll");
+      $("#menu").removeClass("full-list").removeAttr("style");
     });
 
     $(".menu-items li a").click(function() {

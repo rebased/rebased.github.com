@@ -73,6 +73,7 @@ body > header {
   top: 0;
   width: 100%;
   z-index: 3333;
+  background-color: #fff;
 }
 
 body > header > h1.company-name {
@@ -130,6 +131,10 @@ nav.menu .menu-items {
   top: 5rem;
   height: 100vh;
   overflow-y: scroll;
+}
+
+nav.menu .menu-items.full-list {
+  display: block;
 }
 
 nav.menu .menu-items li,
@@ -998,7 +1003,6 @@ aside.contact-form-wrapper > p.disclaimer {
     display: flex;
     padding: 0 calc((100vw - 52rem)/2);
     width: 52rem;
-    background-color: #fff;
   }
 
   body > header > h1.company-name {
