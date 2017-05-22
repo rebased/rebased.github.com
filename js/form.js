@@ -1,76 +1,62 @@
-// jQuery snippet for changing HTML form into JSON
-(function ($) {
-  $.fn.serializeFormJSON = function () {
+var serializeFormJSON = function(form) {
+  var date = new Date()
+  var json = {
+    'fullname': form.querySelector("input[name='fullname']").value,
+    'email': form.querySelector("input[name='email']").value,
+    'id': date.getTime(),
+    'created_at': date.toString()
+  }
 
-      var o = {};
-      var a = this.serializeArray();
-      $.each(a, function () {
-          if (o[this.name]) {
-              if (!o[this.name].push) {
-                  o[this.name] = [o[this.name]];
-              }
-              o[this.name].push(this.value || '');
-          } else {
-              o[this.name] = this.value || '';
-          }
-      });
-      return o;
-  };
-})(jQuery);
+  return json;
+};
 
-$(function() {
+var config = {
+  apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
+  authDomain: "web-lab-b363f.firebaseapp.com",
+  databaseURL: "https://web-lab-b363f.firebaseio.com",
+  storageBucket: "form_submissions.appspot.com",
+};
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
-    authDomain: "web-lab-b363f.firebaseapp.com",
-    databaseURL: "https://web-lab-b363f.firebaseio.com",
-    storageBucket: "form_submissions.appspot.com",
-  };
+var sendForm = function(e) {
+  e.preventDefault();
+  this.querySelector('button').innerHTML = "saving...";
+
+  //initialize Firebase
   firebase.initializeApp(config);
 
-  $('.contact-form').submit(function(e) {
-    e.preventDefault();
-    var $form = $(this);
+  //serialize data to JSON
+  var form_json = serializeFormJSON(this);
 
-    // serialize data to JSON
-    var form_json = $form.serializeFormJSON();
-    var date = new Date()
-    form_json['id'] = date.getTime();
-    form_json['created_at'] = date.toString();
+  // send data to sheetsu
+  var form = this;
+  var button = form.querySelector('button');
+  var request = new XMLHttpRequest();
+  request.open('POST', 'https://sheetsu.com/apis/v1.0/fee30730abea');
+  request.setRequestHeader('Content-Type', 'application/json');
 
-    // console.log(form_json);
+  request.onload = function() {
+    if (request.status >= 200 && request.status < 400) {
+      // clean up the form
+      form.reset();
+      button.innerHTML = "Thanks, we'll contact you soon!";
+      button.classList.add('after-submit');
+      button.setAttribute('disabled', true);
+    } else {
+      button.innerHTML = 'send';
+      button.setAttribute('disabled', false);
+    }
+  };
 
-    $form.children('button').html("saving...")
+  request.onerror = function() {
+    button.innerHTML = 'send';
+    button.setAttr('disabled', false);
+  };
 
-    // saving to sheetsu
-    $.ajax({
-      url: 'https://sheetsu.com/apis/v1.0/fee30730abea',
-      data: form_json,
-      dataType: 'json',
-      type: 'POST',
+  request.send(JSON.stringify(form_json));
 
-      // place for handling successful response
-      // showing (redirecting to) something like /thanks.html
-      // page could be a good idea
-      success: function(data) {
-        // clean up the form
-        $form[0].reset();
-        $form.children('button').html("Thanks, we'll contact you soon!");
-        $form.children('button').addClass("after-submit");
-        $form.children('button').prop("disabled", true);
-      },
+  // save also to firebase
+  firebase.database().ref('submissions/').push(form_json);
+}
 
-      // handling error response
-      error: function(data) {
-        $form.children('button').html("send");
-        $form.children('button').prop("disabled", false);
-      }
-    });
-
-    // save also to firebase
-    firebase.database().ref('submissions/').push(form_json);
-
-    return false;
-  });
-});
+document.getElementById('contact-form-1').addEventListener('submit', sendForm, true);
+document.getElementById('contact-form-2').addEventListener('submit', sendForm, true);
