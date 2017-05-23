@@ -8,7 +8,10 @@ body {
 }
 
 body.noscroll {
-  overflow: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
 }
 
 ul {
@@ -999,6 +1002,9 @@ aside.contact-form-wrapper > p.disclaimer {
     background-size: contain;
     background-position: 0 5rem;
     overflow: visible;
+    position: initial;
+    height: auto;
+    width: auto;
   }
 
   body > header {
