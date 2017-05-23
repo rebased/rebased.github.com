@@ -113,7 +113,7 @@ nav.menu > button:active {
   background-color: #fff
 }
 
-nav.menu > button.hamburger-button.expanded {
+nav.menu.active > button.hamburger-button {
   background-color: #1E1E1E;
   color: #fff;
 }
@@ -133,7 +133,7 @@ nav.menu .menu-items {
   overflow-y: scroll;
 }
 
-nav.menu .menu-items.full-list {
+nav.menu.active .menu-items {
   display: block;
 }
 
@@ -402,7 +402,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #team .divider-line,
-#team hr.extend-divider-line {
+#team.extended hr.divider-line {
   position: relative;
   height: 0.0625rem;
   color: #a0a0a0;
@@ -415,7 +415,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #team div.divider-button-background,
-#team div.extend-divider-button-background {
+#team.extended div.divider-button-background {
   background-color: #FFF;
   height: 2.5rem;
   overflow: visible;
@@ -445,19 +445,19 @@ aside.contact-form-wrapper > p.disclaimer {
   margin: auto;
 }
 
-#team section.extend-section {
+#team.extended section#team-list {
   height: auto;
 }
 
-#team hr.extend-divider-line {
+#team.extended hr.divider-line {
   top: -1.9375rem;
 }
 
-#team div.extend-divider-button-background {
+#team.extended div.divider-button-background {
   top: -1rem;
 }
 
-#team div.extend-divider-button-background a.divider-button img {
+#team.extended div.divider-button-background a.divider-button img {
   margin-top: 0.625rem;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -993,10 +993,12 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 @media (min-width: 992px) {
-  body {
+  body,
+  body.noscroll {
     background: url(../images/header.png) no-repeat;
     background-size: contain;
     background-position: 0 5rem;
+    overflow: visible;
   }
 
   body > header {
@@ -1024,7 +1026,8 @@ aside.contact-form-wrapper > p.disclaimer {
     flex-grow: 7;
   }
 
-  nav.menu .menu-items {
+  nav.menu .menu-items,
+  nav.menu.active .menu-items {
     position: initial;
     display: flex;
     background-color: #fff;
