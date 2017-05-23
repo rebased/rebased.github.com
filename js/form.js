@@ -58,5 +58,5 @@ var sendForm = function(e) {
   firebase.database().ref('submissions/').push(form_json);
 }
 
-document.getElementById('contact-form-1').addEventListener('submit', sendForm, true);
-document.getElementById('contact-form-2').addEventListener('submit', sendForm, true);
+document.getElementById('contact-form-top').addEventListener('submit', sendForm);
+document.getElementById('contact-form-bottom').addEventListener('submit', sendForm);
