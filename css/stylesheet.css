@@ -122,22 +122,24 @@ nav.menu.active > button.hamburger-button {
 }
 
 nav.menu .menu-items {
-  display: none;
+  height: 0;
   z-index: 1000000;
   font-family: "Roboto";
   font-weight: 100;
   font-size: 1.25rem;
   width: 100%;
   background-color: #1E1E1E;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 5rem;
-  height: 100vh;
+  bottom: 0;
   overflow-y: scroll;
+  transition: 0.5s;
 }
 
 nav.menu.active .menu-items {
-  display: block;
+  height: 100%;
+  padding-bottom: 2rem;
 }
 
 nav.menu .menu-items li,
@@ -778,8 +780,7 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   nav.menu .menu-items {
-    height: initial;
-    overflow-y: auto;
+    bottom: initial;
   }
 
   #intro {
@@ -1037,6 +1038,8 @@ aside.contact-form-wrapper > p.disclaimer {
     position: initial;
     display: flex;
     background-color: #fff;
+    padding-bottom: 0;
+    height: 100%;
   }
 
   nav.menu .menu-items li,
