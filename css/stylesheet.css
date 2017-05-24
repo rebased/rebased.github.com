@@ -138,7 +138,7 @@ nav.menu .menu-items {
 }
 
 nav.menu.active .menu-items {
-  height: 100%;
+  height: calc(100% - 5rem);
   padding-bottom: 2rem;
 }
 
@@ -1040,6 +1040,7 @@ aside.contact-form-wrapper > p.disclaimer {
     background-color: #fff;
     padding-bottom: 0;
     height: 100%;
+    transition: none;
   }
 
   nav.menu .menu-items li,

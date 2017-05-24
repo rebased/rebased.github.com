@@ -9,11 +9,13 @@ document.getElementById('nav').addEventListener('click', toggleMenu);
 // toggle team list
 var toggleTeamList = function(e) {
   e.preventDefault();
-  document.getElementById('team').classList.toggle('extended');
+  var teamSection = document.getElementById('team');
+  var offset = teamSection.offsetTop;
+  teamSection.classList.toggle('extended');
 
-  if (!document.getElementById('team').classList.contains('extended')) {
-    document.getElementById('team').scrollIntoView()
-  }
+  if (!teamSection.classList.contains('extended')) {
+    window.scrollTo(0, offset-80);
+  };
 }
 
 document.getElementById('team-list-toggle').addEventListener('click', toggleTeamList);
