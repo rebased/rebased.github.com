@@ -211,11 +211,12 @@ aside.contact-form-wrapper > p.disclaimer {
   line-height: 1.2rem;
 }
 
-#pitch,
 #projects,
 #open-source,
-#community {
-  margin-bottom: 3.75rem;
+#contact,
+#community,
+#team {
+  padding-top: 5rem;
 }
 
 #intro {
@@ -296,7 +297,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #team {
-  margin: auto;
+  margin: 0 auto -4rem;
   text-align: center;
 }
 
@@ -479,6 +480,10 @@ aside.contact-form-wrapper > p.disclaimer {
 #team .github {
   background: url(../images/github.png) no-repeat;
   margin: 1rem;
+}
+
+#projects {
+  margin-bottom: 0;
 }
 
 #projects .projects-portfolio {
@@ -781,6 +786,10 @@ aside.contact-form-wrapper > p.disclaimer {
 
   nav.menu .menu-items {
     bottom: initial;
+  }
+
+  nav.menu.active .menu-items {
+    height: 50%;
   }
 
   #intro {

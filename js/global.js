@@ -14,7 +14,7 @@ var toggleTeamList = function(e) {
   teamSection.classList.toggle('extended');
 
   if (!teamSection.classList.contains('extended')) {
-    window.scrollTo(0, offset-80);
+    window.scrollTo(0, offset);
   };
 }
 
