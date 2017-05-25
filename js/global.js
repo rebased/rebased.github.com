@@ -1,5 +1,6 @@
 // toggle menu on mobile
-var toggleMenu = function() {
+var toggleMenu = function(event) {
+  event.preventDefault();
   document.body.classList.toggle('noscroll');
   document.getElementById('nav').classList.toggle('active');
 }
@@ -7,14 +8,13 @@ var toggleMenu = function() {
 document.getElementById('nav').addEventListener('click', toggleMenu);
 
 // toggle team list
-var toggleTeamList = function(e) {
-  e.preventDefault();
+var toggleTeamList = function(event) {
+  event.preventDefault();
   var teamSection = document.getElementById('team');
-  var offset = teamSection.offsetTop;
   teamSection.classList.toggle('extended');
 
   if (!teamSection.classList.contains('extended')) {
-    window.scrollTo(0, offset);
+    window.scrollTo(0, teamSection.offsetTop);
   };
 }
 
