@@ -10,37 +10,29 @@ var serializeFormJSON = function(form) {
   return json;
 };
 
-var config = {
-  apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
-  authDomain: "web-lab-b363f.firebaseapp.com",
-  databaseURL: "https://web-lab-b363f.firebaseio.com",
-  storageBucket: "form_submissions.appspot.com",
+var sendToFirebase = function(json) {
+  var config = {
+    apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
+    authDomain: "web-lab-b363f.firebaseapp.com",
+    databaseURL: "https://web-lab-b363f.firebaseio.com",
+    storageBucket: "form_submissions.appspot.com",
+  };
+
+  firebase.initializeApp(config);
+  firebase.database().ref('submissions/').push(json);
 };
 
-var sendForm = function(e) {
-  e.preventDefault();
-  this.querySelector('button').innerHTML = "saving...";
-
-  //initialize Firebase
-  firebase.initializeApp(config);
-
-  //serialize data to JSON
-  var form_json = serializeFormJSON(this);
-
-  // send data to sheetsu
-  var form = this;
-  var button = form.querySelector('button');
+var sendToSheetsu = function(json, form) {
   var request = new XMLHttpRequest();
+
   request.open('POST', 'https://sheetsu.com/apis/v1.0/fee30730abea');
   request.setRequestHeader('Content-Type', 'application/json');
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
-      // clean up the form
       form.reset();
       button.innerHTML = "Thanks, we'll contact you soon!";
       button.classList.add('after-submit');
-      button.setAttribute('disabled', true);
     } else {
       button.innerHTML = 'send';
       button.setAttribute('disabled', false);
@@ -52,10 +44,19 @@ var sendForm = function(e) {
     button.setAttr('disabled', false);
   };
 
-  request.send(JSON.stringify(form_json));
+  request.send(JSON.stringify(json));
+}
 
-  // save also to firebase
-  firebase.database().ref('submissions/').push(form_json);
+var sendForm = function(event) {
+  event.preventDefault();
+  var button = this.querySelector('button');
+  button.setAttribute('disabled', true);
+  button.innerHTML = 'saving...';
+
+  var form_json = serializeFormJSON(this);
+
+  sendToFirebase(form_json);
+  sendToSheetsu(form_json, this);
 }
 
 document.getElementById('contact-form-top').addEventListener('submit', sendForm);
