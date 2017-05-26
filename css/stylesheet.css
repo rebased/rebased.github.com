@@ -1044,6 +1044,7 @@ aside.contact-form-wrapper > p.disclaimer {
     padding-bottom: 0;
     height: 100%;
     transition: none;
+    overflow: hidden;
   }
 
   nav.menu .menu-items li,

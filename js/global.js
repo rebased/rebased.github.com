@@ -1,6 +1,5 @@
 // toggle menu on mobile
-var toggleMenu = function(event) {
-  event.preventDefault();
+var toggleMenu = function() {
   document.body.classList.toggle('noscroll');
   document.getElementById('nav').classList.toggle('active');
 }
