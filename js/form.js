@@ -11,52 +11,61 @@ var serializeFormJSON = function(form) {
 };
 
 var sendToFirebase = function(json) {
-  var config = {
-    apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
-    authDomain: "web-lab-b363f.firebaseapp.com",
-    databaseURL: "https://web-lab-b363f.firebaseio.com",
-    storageBucket: "form_submissions.appspot.com",
-  };
+  return new Promise(function(resolve, reject) {
+    var config = {
+      apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
+      authDomain: "web-lab-b363f.firebaseapp.com",
+      databaseURL: "https://web-lab-b363f.firebaseio.com",
+      storageBucket: "form_submissions.appspot.com",
+    };
 
-  firebase.initializeApp(config);
-  firebase.database().ref('submissions/').push(json);
+    firebase.initializeApp(config);
+    firebase.database().ref('submissions/').push(json, resolve());
+  });
 };
 
-var sendToSheetsu = function(json, form) {
-  var request = new XMLHttpRequest();
+var sendToSheetsu = function(json) {
+  return new Promise(function(resolve, reject) {
+    var request = new XMLHttpRequest();
 
-  request.open('POST', 'https://sheetsu.com/apis/v1.0/fee30730abea');
-  request.setRequestHeader('Content-Type', 'application/json');
+    request.open('POST', 'https://sheetsu.com/apis/v1.0/fee30730abea');
+    request.setRequestHeader('Content-Type', 'application/json');
 
-  request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      form.reset();
-      button.innerHTML = "Thanks, we'll contact you soon!";
-      button.classList.add('after-submit');
-    } else {
-      button.innerHTML = 'send';
-      button.setAttribute('disabled', false);
-    }
-  };
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        resolve(request.response);
+      } else {
+        reject(request.statusText);
+      }
+    };
 
-  request.onerror = function() {
-    button.innerHTML = 'send';
-    button.setAttr('disabled', false);
-  };
+    request.onerror = function() {
+      reject(request.statusText);
+    };
 
-  request.send(JSON.stringify(json));
+    request.send(JSON.stringify(json));
+  });
 }
 
 var sendForm = function(event) {
   event.preventDefault();
   var button = this.querySelector('button');
-  button.setAttribute('disabled', true);
+  button.disabled = true;
   button.innerHTML = 'saving...';
 
   var form_json = serializeFormJSON(this);
+  var form = this;
 
-  sendToFirebase(form_json);
-  sendToSheetsu(form_json, this);
+  Promise.all([sendToSheetsu(form_json), sendToFirebase(form_json)])
+    .then(function() {
+      form.reset();
+      button.innerHTML = "Thanks, we'll contact you soon!";
+      button.classList.add('after-submit');
+  }).catch(function(error) {
+    console.log(error);
+    button.innerHTML = 'send';
+    button.disabled = false;
+  });
 }
 
 document.getElementById('contact-form-top').addEventListener('submit', sendForm);
