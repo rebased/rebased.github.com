@@ -12,7 +12,7 @@
 <body>
   <header>
     <h1 class="company-name"><a href="index.html">Rebased</a></h1>
-    <nav class="menu">
+    <nav class="menu" id='nav'>
       <button class="hamburger-button" id="hamburger">&#9776;</button>
       <ul class="menu-items" id="menu">
         <li><a href="jobs.html">Jobs</a></li>
@@ -34,7 +34,7 @@
       </section>
       <aside class="contact-form-wrapper">
         <p class="prompt">Want us to work for you?</p>
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form-top">
           <header>Leave your name and e-mail,<br> and we'll write you back.</header>
           <input type="text" name="fullname" placeholder="full name">
           <input type="email" name="email" placeholder="email">
@@ -64,7 +64,7 @@
       <header>
         The Team
       </header>
-      <section class="to-toggle">
+      <section id="team-list">
         <ul>
           <li>
             <figure>
@@ -443,10 +443,10 @@
           </li>
         </ul>
       </section>
-      <div class="divider-button-background">
+      <div class="divider-button-background" id="team-list-toggle">
         <a href="#" class="divider-button"><img src="images/team/more-button.png" /></a>
       </div>
-      <hr class="divider-line" />
+      <hr class="divider-line"/>
     </section>
 
     <section id="projects">
@@ -687,7 +687,7 @@
           Leave your name and e-mail, and we'll write you back.<br />
           …or just email us at <a href="mailto:contact@rebased.pl">contact@rebased.pl</a>
         </p>
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form-bottom">
           <input type="text" name="fullname" placeholder="full name">
           <input type="email" name="email" placeholder="email">
           <button type="submit">send</button>
@@ -701,9 +701,8 @@
     <p>Copyright <strong>Rebased</strong> ‘2017. All rights reserved</p>
   </footer>
 
-  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/global.min.js"></script>
-  <script type="text/javascript" src="js/form.min.js"></script>
+  <script type="text/javascript" src="js/form.js"></script>
   <script type="text/javascript" src="js/fingerprint.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-database.js"></script>

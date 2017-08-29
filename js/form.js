@@ -1,76 +1,72 @@
-// jQuery snippet for changing HTML form into JSON
-(function ($) {
-  $.fn.serializeFormJSON = function () {
+var serializeFormJSON = function(form) {
+  var date = new Date()
+  var json = {
+    'fullname': form.querySelector("input[name='fullname']").value,
+    'email': form.querySelector("input[name='email']").value,
+    'id': date.getTime(),
+    'created_at': date.toString()
+  }
 
-      var o = {};
-      var a = this.serializeArray();
-      $.each(a, function () {
-          if (o[this.name]) {
-              if (!o[this.name].push) {
-                  o[this.name] = [o[this.name]];
-              }
-              o[this.name].push(this.value || '');
-          } else {
-              o[this.name] = this.value || '';
-          }
-      });
-      return o;
-  };
-})(jQuery);
+  return json;
+};
 
-$(function() {
+var sendToFirebase = function(json) {
+  return new Promise(function(resolve, reject) {
+    var config = {
+      apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
+      authDomain: "web-lab-b363f.firebaseapp.com",
+      databaseURL: "https://web-lab-b363f.firebaseio.com",
+      storageBucket: "form_submissions.appspot.com",
+    };
 
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDrg6aEURLreoVQeaoRGskTJ0FKlpESRCc",
-    authDomain: "web-lab-b363f.firebaseapp.com",
-    databaseURL: "https://web-lab-b363f.firebaseio.com",
-    storageBucket: "form_submissions.appspot.com",
-  };
-  firebase.initializeApp(config);
-
-  $('.contact-form').submit(function(e) {
-    e.preventDefault();
-    var $form = $(this);
-
-    // serialize data to JSON
-    var form_json = $form.serializeFormJSON();
-    var date = new Date()
-    form_json['id'] = date.getTime();
-    form_json['created_at'] = date.toString();
-
-    // console.log(form_json);
-
-    $form.children('button').html("saving...")
-
-    // saving to sheetsu
-    $.ajax({
-      url: 'https://sheetsu.com/apis/v1.0/fee30730abea',
-      data: form_json,
-      dataType: 'json',
-      type: 'POST',
-
-      // place for handling successful response
-      // showing (redirecting to) something like /thanks.html
-      // page could be a good idea
-      success: function(data) {
-        // clean up the form
-        $form[0].reset();
-        $form.children('button').html("Thanks, we'll contact you soon!");
-        $form.children('button').addClass("after-submit");
-        $form.children('button').prop("disabled", true);
-      },
-
-      // handling error response
-      error: function(data) {
-        $form.children('button').html("send");
-        $form.children('button').prop("disabled", false);
-      }
-    });
-
-    // save also to firebase
-    firebase.database().ref('submissions/').push(form_json);
-
-    return false;
+    firebase.initializeApp(config);
+    firebase.database().ref('submissions/').push(json, resolve());
   });
-});
+};
+
+var sendToSheetsu = function(json) {
+  return new Promise(function(resolve, reject) {
+    var request = new XMLHttpRequest();
+
+    request.open('POST', 'https://sheetsu.com/apis/v1.0/fee30730abea');
+    request.setRequestHeader('Content-Type', 'application/json');
+
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        resolve(request.response);
+      } else {
+        reject(request.statusText);
+      }
+    };
+
+    request.onerror = function() {
+      reject(request.statusText);
+    };
+
+    request.send(JSON.stringify(json));
+  });
+}
+
+var sendForm = function(event) {
+  event.preventDefault();
+  var button = this.querySelector('button');
+  button.disabled = true;
+  button.innerHTML = 'saving...';
+
+  var form_json = serializeFormJSON(this);
+  var form = this;
+
+  Promise.all([sendToSheetsu(form_json), sendToFirebase(form_json)])
+    .then(function() {
+      form.reset();
+      button.innerHTML = "Thanks, we'll contact you soon!";
+      button.classList.add('after-submit');
+  }).catch(function(error) {
+    console.log(error);
+    button.innerHTML = 'send';
+    button.disabled = false;
+  });
+}
+
+document.getElementById('contact-form-top').addEventListener('submit', sendForm);
+document.getElementById('contact-form-bottom').addEventListener('submit', sendForm);

@@ -8,7 +8,7 @@ body {
 }
 
 body.noscroll {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 ul {
@@ -113,28 +113,30 @@ nav.menu > button:active {
   background-color: #fff
 }
 
-nav.menu > button.hamburger-button.expanded {
+nav.menu.active > button.hamburger-button {
   background-color: #1E1E1E;
   color: #fff;
 }
 
 nav.menu .menu-items {
-  display: none;
+  height: 0;
   z-index: 1000000;
   font-family: "Roboto";
   font-weight: 100;
   font-size: 1.25rem;
   width: 100%;
   background-color: #1E1E1E;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 5rem;
-  height: 100vh;
+  bottom: 0;
   overflow-y: scroll;
+  transition: 0.5s;
 }
 
-nav.menu .menu-items.full-list {
-  display: block;
+nav.menu.active .menu-items {
+  height: calc(100% - 5rem);
+  padding-bottom: 2rem;
 }
 
 nav.menu .menu-items li,
@@ -206,11 +208,12 @@ aside.contact-form-wrapper > p.disclaimer {
   line-height: 1.2rem;
 }
 
-#pitch,
 #projects,
 #open-source,
-#community {
-  margin-bottom: 3.75rem;
+#contact,
+#community,
+#team {
+  padding-top: 5rem;
 }
 
 #intro {
@@ -291,7 +294,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #team {
-  margin: auto;
+  margin: 0 auto -4rem;
   text-align: center;
 }
 
@@ -402,7 +405,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #team .divider-line,
-#team hr.extend-divider-line {
+#team.extended hr.divider-line {
   position: relative;
   height: 0.0625rem;
   color: #a0a0a0;
@@ -415,7 +418,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #team div.divider-button-background,
-#team div.extend-divider-button-background {
+#team.extended div.divider-button-background {
   background-color: #FFF;
   height: 2.5rem;
   overflow: visible;
@@ -445,19 +448,19 @@ aside.contact-form-wrapper > p.disclaimer {
   margin: auto;
 }
 
-#team section.extend-section {
+#team.extended section#team-list {
   height: auto;
 }
 
-#team hr.extend-divider-line {
+#team.extended hr.divider-line {
   top: -1.9375rem;
 }
 
-#team div.extend-divider-button-background {
+#team.extended div.divider-button-background {
   top: -1rem;
 }
 
-#team div.extend-divider-button-background a.divider-button img {
+#team.extended div.divider-button-background a.divider-button img {
   margin-top: 0.625rem;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -474,6 +477,10 @@ aside.contact-form-wrapper > p.disclaimer {
 #team .github {
   background: url(../images/github.png) no-repeat;
   margin: 1rem;
+}
+
+#projects {
+  margin-bottom: 0;
 }
 
 #projects .projects-portfolio {
@@ -775,8 +782,11 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   nav.menu .menu-items {
-    height: initial;
-    overflow-y: auto;
+    bottom: initial;
+  }
+
+  nav.menu.active .menu-items {
+    height: 29rem;
   }
 
   #intro {
@@ -993,10 +1003,12 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 @media (min-width: 992px) {
-  body {
+  body,
+  body.noscroll {
     background: url(../images/header.png) no-repeat;
     background-size: contain;
     background-position: 0 5rem;
+    overflow: visible;
   }
 
   body > header {
@@ -1024,10 +1036,15 @@ aside.contact-form-wrapper > p.disclaimer {
     flex-grow: 7;
   }
 
-  nav.menu .menu-items {
+  nav.menu .menu-items,
+  nav.menu.active .menu-items {
     position: initial;
     display: flex;
     background-color: #fff;
+    padding-bottom: 0;
+    height: 100%;
+    transition: none;
+    overflow: hidden;
   }
 
   nav.menu .menu-items li,
