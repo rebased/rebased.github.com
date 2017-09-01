@@ -24,29 +24,6 @@ var sendToFirebase = function(json) {
   });
 };
 
-var sendToSheetsu = function(json) {
-  return new Promise(function(resolve, reject) {
-    var request = new XMLHttpRequest();
-
-    request.open('POST', 'https://sheetsu.com/apis/v1.0/fee30730abea');
-    request.setRequestHeader('Content-Type', 'application/json');
-
-    request.onload = function() {
-      if (request.status >= 200 && request.status < 400) {
-        resolve(request.response);
-      } else {
-        reject(request.statusText);
-      }
-    };
-
-    request.onerror = function() {
-      reject(request.statusText);
-    };
-
-    request.send(JSON.stringify(json));
-  });
-}
-
 var sendForm = function(event) {
   event.preventDefault();
   var button = this.querySelector('button');
@@ -56,7 +33,7 @@ var sendForm = function(event) {
   var form_json = serializeFormJSON(this);
   var form = this;
 
-  Promise.all([sendToSheetsu(form_json), sendToFirebase(form_json)])
+  sendToFirebase(form_json)
     .then(function() {
       form.reset();
       button.innerHTML = "Thanks, we'll contact you soon!";
@@ -68,5 +45,15 @@ var sendForm = function(event) {
   });
 }
 
-document.getElementById('contact-form-top').addEventListener('submit', sendForm);
-document.getElementById('contact-form-bottom').addEventListener('submit', sendForm);
+var contactTop = document.getElementById('contact-form-top');
+var contactBottom = document.getElementById('contact-form-bottom');
+var contactJobs = document.getElementById('contact-jobs');
+if (contactTop !== null) {
+  contactTop.addEventListener('submit', sendForm);
+}
+if (contactBottom !== null) {
+  contactBottom.addEventListener('submit', sendForm);
+}
+if (contactJobs !== null) {
+  contactJobs.addEventListener('submit', sendForm);
+}
