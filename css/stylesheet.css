@@ -1241,10 +1241,6 @@ aside.contact-form-wrapper > p.disclaimer {
     flex-basis: 100%;
   }
 
-  .hide {
-    display: none;
-  }
-
   #contact .address-details-wrapper {
     flex-direction: column;
   }
