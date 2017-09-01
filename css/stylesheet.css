@@ -404,6 +404,10 @@ aside.contact-form-wrapper > p.disclaimer {
   margin: auto;
 }
 
+.hide,#intro header:after,#team footer a.hide,.hide-twitter img.twitter,.hide-github img.github {
+  display: none;
+}
+
 #team .divider-line,
 #team.extended hr.divider-line {
   position: relative;
