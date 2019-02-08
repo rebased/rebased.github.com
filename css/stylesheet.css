@@ -483,6 +483,11 @@ aside.contact-form-wrapper > p.disclaimer {
   margin: 1rem;
 }
 
+#team .instagram {
+  background: url(../images/instagram.png) no-repeat;
+  margin: 1rem;
+}
+
 #projects {
   margin-bottom: 0;
 }
