@@ -1344,7 +1344,7 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   #contact .map {
-    flex-basis: 100%;
+    flex: 1;
   }
 
   #contact .address-details-wrapper {
