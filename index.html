@@ -781,7 +781,13 @@
   </main>
 
   <footer>
-    <p>Copyright <strong>Rebased</strong> ‘2019. All rights reserved</p>
+    <p>
+      Copyright <strong>Rebased</strong>
+        <span id="copyright">
+          <script>document.getElementById('copyright').appendChild(document.createTextNode("'"+new Date().getFullYear()+"."))</script>
+        </span>
+      All rights reserved
+    </p>
   </footer>
 
   <script type="text/javascript" src="js/global.min.js"></script>
