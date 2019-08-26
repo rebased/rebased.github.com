@@ -318,7 +318,6 @@ aside.contact-form-wrapper > p.disclaimer {
 
 #team figure {
   position: relative;
-  cursor: pointer;
   margin: 0;
 }
 
@@ -707,6 +706,24 @@ aside.contact-form-wrapper > p.disclaimer {
 #contact aside.contact-form-wrapper > p.disclaimer,
 #jobs aside.contact-form-wrapper > p.disclaimer {
   padding: 1.5rem 0 0;
+}
+
+#contact .social-media-wrapper,
+#jobs .social-media-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+#contact .social-media-wrapper a,
+#jobs .social-media-wrapper a {
+  cursor: pointer;
+}
+
+#contact .social-media-wrapper img,
+#jobs .social-media-wrapper img {
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem;
 }
 
 #jobs {
