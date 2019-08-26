@@ -175,6 +175,7 @@ aside.contact-form-wrapper > form.contact-form input {
 }
 
 aside.contact-form-wrapper > form.contact-form button {
+  cursor: pointer;
   background-color: #00ea84;
   border: 0.01rem solid #00ea84;
   border-radius: 2rem;
@@ -1055,6 +1056,7 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #contact aside.contact-form-wrapper > form.contact-form button,
   #jobs aside.contact-form-wrapper > form.contact-form button {
+    cursor: pointer;
     display: block;
     margin: auto;
     text-align: center;
