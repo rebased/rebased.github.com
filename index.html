@@ -830,6 +830,22 @@
     fbq('init', '1065601640142426');
     fbq('track', "PageView");
   </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".menu-items a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          let hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+  </script>
 
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1065601640142426&ev=PageView&noscript=1" /></noscript>
