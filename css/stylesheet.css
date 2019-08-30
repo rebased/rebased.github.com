@@ -545,7 +545,7 @@ aside.contact-form-wrapper > p.disclaimer {
   border: none;
 }
 
-#open-source .pact-image {
+#open-source .open-source-image {
   width: 5rem;
   padding-bottom: 1rem;
 }
@@ -1334,7 +1334,7 @@ aside.contact-form-wrapper > p.disclaimer {
     padding-right: 1rem;
   }
 
-  #open-source .pact-image {
+  #open-source .open-source-image {
     padding-right: 2.5rem;
     margin-left: 1rem;
   }
