@@ -545,6 +545,11 @@ aside.contact-form-wrapper > p.disclaimer {
   border: none;
 }
 
+#open-source .pact-image {
+  width: 5rem;
+  padding-bottom: 1rem;
+}
+
 #open-source .open-source-project > header {
   font-size: 1.75rem;
   font-family: 'Roboto', sans-serif;
@@ -1327,6 +1332,11 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #open-source > ul > li > img {
     padding-right: 1rem;
+  }
+
+  #open-source .pact-image {
+    padding-right: 2.5rem;
+    margin-left: 1rem;
   }
 
   #open-source .open-source-project header {
