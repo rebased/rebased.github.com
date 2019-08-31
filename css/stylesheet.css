@@ -1439,4 +1439,20 @@ aside.contact-form-wrapper > p.disclaimer {
   #intro aside.contact-form-wrapper > p.disclaimer {
     color: #fff;
   }
+
+  #jobs {
+    background: url(../images/header-jobs-desktop.png) no-repeat 0 2rem;
+    background-size: 100vw;
+  }
+
+  #jobs .job-offer {
+    padding-top: calc(9vw);
+  }
+}
+
+@media (min-width: 2000px) {
+  #jobs {
+    background: url(../images/header-jobs-desktop.png) no-repeat 0 0;
+    background-size: 100vw;
+  }
 }
