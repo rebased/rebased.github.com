@@ -549,6 +549,15 @@ aside.contact-form-wrapper > p.disclaimer {
   border: none;
 }
 
+#open-source .open-source-image {
+  width: 5rem;
+  padding-bottom: 1rem;
+}
+
+#open-source .open-source-project {
+  width: 70%
+}
+
 #open-source .open-source-project > header {
   font-size: 1.75rem;
   font-family: 'Roboto', sans-serif;
@@ -1331,6 +1340,11 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #open-source > ul > li > img {
     padding-right: 1rem;
+  }
+
+  #open-source .open-source-image {
+    padding-right: 2.5rem;
+    margin-left: 1rem;
   }
 
   #open-source .open-source-project header {
