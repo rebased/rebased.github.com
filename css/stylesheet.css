@@ -550,6 +550,10 @@ aside.contact-form-wrapper > p.disclaimer {
   padding-bottom: 1rem;
 }
 
+#open-source .open-source-project {
+  width: 70%
+}
+
 #open-source .open-source-project > header {
   font-size: 1.75rem;
   font-family: 'Roboto', sans-serif;
