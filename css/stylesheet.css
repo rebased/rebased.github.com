@@ -549,13 +549,13 @@ aside.contact-form-wrapper > p.disclaimer {
   border: none;
 }
 
-#open-source .open-source-image {
+#open-source > ul > li > img {
   width: 5rem;
   padding-bottom: 1rem;
 }
 
 #open-source .open-source-project {
-  width: 70%
+  flex-grow: 2;
 }
 
 #open-source .open-source-project > header {
@@ -1018,6 +1018,7 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #community > ul > li > img {
     padding: 0 1rem;
+    height: 7.5rem;
   }
 
   #community .community-project {
@@ -1336,15 +1337,24 @@ aside.contact-form-wrapper > p.disclaimer {
     flex-direction: row;
     border-bottom: 0.01rem #8F8F8F solid;
     text-align: left;
+    justify-content: space-between;
   }
 
   #open-source > ul > li > img {
     padding-right: 1rem;
   }
 
-  #open-source .open-source-image {
-    padding-right: 2.5rem;
-    margin-left: 1rem;
+  #open-source .two-contributors > img {
+    padding-right: 0;
+  }
+
+  #open-source .open-source-project {
+    padding-left: 2rem;
+  }
+
+  #open-source .two-contributors > .open-source-project {
+    padding-left: 0;
+    margin-left: 3rem;
   }
 
   #open-source .open-source-project header {
@@ -1360,6 +1370,10 @@ aside.contact-form-wrapper > p.disclaimer {
   #open-source .contributors {
     padding-left: 2rem;
     flex-wrap: nowrap;
+  }
+
+  #open-source .two-contributors > .contributors {
+    padding-left: 0;
   }
 
   #open-source .contributors > figure {
