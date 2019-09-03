@@ -555,8 +555,7 @@ aside.contact-form-wrapper > p.disclaimer {
 }
 
 #open-source .open-source-project {
-  max-width: 65%;
-  padding-left: 2rem;
+  flex-grow: 2;
 }
 
 #open-source .open-source-project > header {
@@ -1060,7 +1059,6 @@ aside.contact-form-wrapper > p.disclaimer {
 
   #community > ul > li > img {
     padding: 0 1rem;
-    width: 9rem;
     height: 7.5rem;
   }
 
@@ -1392,7 +1390,7 @@ aside.contact-form-wrapper > p.disclaimer {
   }
 
   #open-source .open-source-project {
-    flex-grow: 2;
+    padding-left: 2rem;
   }
 
   #open-source .two-contributors > .open-source-project {
