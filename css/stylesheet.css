@@ -679,6 +679,10 @@ aside.contact-form-wrapper > p.disclaimer {
   font-weight: 100;
 }
 
+#community .center-small-logo {
+  padding-top: 1rem;
+}
+
 #contact {
   color: #373737;
 }
