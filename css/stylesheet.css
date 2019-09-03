@@ -638,6 +638,47 @@ aside.contact-form-wrapper > p.disclaimer {
   font-weight: 100;
 }
 
+#community .supported-events-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+#community .supported-events-wrapper > header {
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: 'Roboto', sans-serif;
+  color: #474747;
+  margin-bottom: 2rem;
+}
+
+#community .supported-events {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#community .supported-events img {
+  width: 4rem;
+}
+
+#community .event-wrapper {
+  margin: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#community .event-wrapper span {
+  font-size: 0.9rem;
+  line-height: 160%;
+  font-weight: 100;
+}
+
 #contact {
   color: #373737;
 }
