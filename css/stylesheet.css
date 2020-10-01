@@ -699,7 +699,7 @@ aside.contact-form-wrapper > p.disclaimer {
   display: block;
   padding: 4rem 0 0;
   height: 25rem;
-  background: url(../images/contact/rebased_mapa.png) no-repeat center;
+  background: url(../images/contact/rebased_mapa.png) no-repeat center right;
 }
 
 #contact .address-details-wrapper {
