@@ -492,6 +492,11 @@ aside.contact-form-wrapper > p.disclaimer {
   margin: 1rem;
 }
 
+#team .lunar {
+  background: url(../images/lunar.svg) no-repeat;
+  margin: 1rem;
+}
+
 #projects {
   margin-bottom: 0;
 }
